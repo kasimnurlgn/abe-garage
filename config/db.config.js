@@ -18,6 +18,4 @@ module.exports = pool;
 git add .
 git commit -m "order service added"
 git push
-
-
 */
