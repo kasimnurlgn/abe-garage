@@ -13,3 +13,12 @@ const pool = mysql.createPool({
 });
 
 module.exports = pool;
+
+
+/* 
+git add .
+git commit -m "employee routes added"
+git push
+
+
+*/
