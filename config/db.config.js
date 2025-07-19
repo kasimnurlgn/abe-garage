@@ -17,7 +17,7 @@ module.exports = pool;
 
 /* 
 git add .
-git commit -m "employee routes added"
+git commit -m "employee controller added"
 git push
 
 
