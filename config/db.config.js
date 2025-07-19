@@ -16,6 +16,6 @@ module.exports = pool;
 
 /* 
 git add .
-git commit -m "order service added"
+git commit -m "service contoller added"
 git push
 */
