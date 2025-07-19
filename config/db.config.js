@@ -14,10 +14,9 @@ const pool = mysql.createPool({
 
 module.exports = pool;
 
-
 /* 
 git add .
-git commit -m "login controller added"
+git commit -m "login service added"
 git push
 
 
