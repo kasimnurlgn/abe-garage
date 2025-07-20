@@ -1,0 +1,6 @@
+2025-07-20 14:15:08 [INFO]: Server running on port 5000
+2025-07-20 14:15:09 [INFO]: Database connected successfully
+2025-07-20 14:36:36 [INFO]: POST /api/customers
+2025-07-20 14:36:36 [WARN]: No token provided for request:
+2025-07-20 14:36:47 [INFO]: POST /api/customers
+2025-07-20 14:36:47 [WARN]: No token provided for request:
