@@ -35,3 +35,154 @@
 2025-07-21 10:50:50 [INFO]: Server running on port 5000
 2025-07-21 10:50:50 [INFO]: Database connected successfully
 2025-07-21 11:00:54 [INFO]: POST /api/login
+2025-07-21 11:09:32 [INFO]: POST /api/customers
+2025-07-21 11:09:32 [ERROR]: Invalid token:
+2025-07-21 11:11:37 [INFO]: POST /api/customers
+2025-07-21 11:11:37 [ERROR]: Invalid token:
+2025-07-21 11:13:59 [INFO]: POST /api/customers
+2025-07-21 11:13:59 [ERROR]: Invalid token:
+2025-07-21 11:16:23 [INFO]: POST /api/login
+2025-07-21 11:20:23 [INFO]: POST /api/customers
+2025-07-21 11:20:54 [INFO]: POST /api/customers
+2025-07-21 11:23:03 [INFO]: GET /api/customers
+2025-07-21 11:23:03 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 11:23:03 [ERROR]: Error fetching customers:
+2025-07-21 11:23:30 [INFO]: GET /api/customers
+2025-07-21 11:23:30 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 11:23:30 [ERROR]: Error fetching customers:
+2025-07-21 11:24:43 [INFO]: GET /api/customers
+2025-07-21 11:24:43 [ERROR]: Invalid token:
+2025-07-21 11:25:17 [INFO]: GET /api/customers
+2025-07-21 11:25:17 [ERROR]: Invalid token:
+2025-07-21 11:25:38 [INFO]: GET /api/customers
+2025-07-21 11:25:38 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 11:25:38 [ERROR]: Error fetching customers:
+2025-07-21 11:26:02 [INFO]: GET /api/customers
+2025-07-21 11:26:02 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 11:26:02 [ERROR]: Error fetching customers:
+2025-07-21 11:26:51 [INFO]: GET /api/customers
+2025-07-21 11:26:51 [ERROR]: Invalid token:
+2025-07-21 11:27:30 [INFO]: GET /api/customers
+2025-07-21 11:27:30 [ERROR]: Invalid token:
+2025-07-21 11:27:46 [INFO]: GET /api/customers
+2025-07-21 11:27:46 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 11:27:46 [ERROR]: Error fetching customers:
+2025-07-21 14:02:42 [INFO]: Server running on port 5000
+2025-07-21 14:02:42 [INFO]: Database connected successfully
+2025-07-21 14:04:20 [INFO]: Server running on port 5000
+2025-07-21 14:04:20 [INFO]: Database connected successfully
+2025-07-21 14:04:42 [INFO]: GET /api/customers
+2025-07-21 14:04:42 [ERROR]: Invalid token:
+2025-07-21 14:04:51 [INFO]: GET /api/customers
+2025-07-21 14:04:51 [ERROR]: Invalid token:
+2025-07-21 14:05:43 [INFO]: GET /api/log
+2025-07-21 14:06:21 [INFO]: POST /api/login
+2025-07-21 14:08:32 [INFO]: POST /api/customers
+2025-07-21 14:08:32 [ERROR]: Database error creating customer: Duplicate entry '1234567890' for key 'customer_phone_number'
+2025-07-21 14:08:32 [ERROR]: Error creating customer:
+2025-07-21 14:09:37 [INFO]: POST /api/customers
+2025-07-21 14:09:37 [ERROR]: Database error creating customer: Duplicate entry '1234567890' for key 'customer_phone_number'
+2025-07-21 14:09:37 [ERROR]: Error creating customer:
+2025-07-21 14:11:28 [INFO]: POST /api/customers
+2025-07-21 14:12:24 [INFO]: GET /api/customers
+2025-07-21 14:12:24 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:12:24 [ERROR]: Error fetching customers:
+2025-07-21 14:22:15 [INFO]: Server running on port 5000
+2025-07-21 14:22:15 [INFO]: Database connected successfully
+2025-07-21 14:22:22 [INFO]: GET /api/customers
+2025-07-21 14:22:22 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:22:22 [ERROR]: Error fetching customers:
+2025-07-21 14:22:24 [INFO]: GET /api/customers
+2025-07-21 14:22:24 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:22:24 [ERROR]: Error fetching customers:
+2025-07-21 14:22:42 [INFO]: GET /api/customers
+2025-07-21 14:22:42 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:22:42 [ERROR]: Error fetching customers:
+2025-07-21 14:23:10 [INFO]: Server running on port 5000
+2025-07-21 14:23:10 [INFO]: Database connected successfully
+2025-07-21 14:26:26 [INFO]: Server running on port 5000
+2025-07-21 14:26:26 [INFO]: Database connected successfully
+2025-07-21 14:26:33 [INFO]: GET /api/customers
+2025-07-21 14:26:33 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:26:33 [ERROR]: Error fetching customers:
+2025-07-21 14:33:00 [INFO]: GET /api/customers
+2025-07-21 14:33:00 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:33:00 [ERROR]: Error fetching customers:
+2025-07-21 14:33:20 [INFO]: Server running on port 5000
+2025-07-21 14:33:20 [INFO]: Database connected successfully
+2025-07-21 14:33:35 [INFO]: Server running on port 5000
+2025-07-21 14:33:35 [INFO]: Database connected successfully
+2025-07-21 14:35:06 [INFO]: GET /api/customers
+2025-07-21 14:35:06 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:35:06 [ERROR]: Error fetching customers:
+2025-07-21 14:36:19 [INFO]: Server running on port 5000
+2025-07-21 14:36:19 [INFO]: Database connected successfully
+2025-07-21 14:36:25 [INFO]: GET /api/customers
+2025-07-21 14:36:25 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:36:25 [ERROR]: Error fetching customers:
+2025-07-21 14:36:31 [INFO]: GET /api/customers
+2025-07-21 14:36:31 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:36:31 [ERROR]: Error fetching customers:
+2025-07-21 14:37:18 [INFO]: Server running on port 5000
+2025-07-21 14:37:18 [INFO]: Database connected successfully
+2025-07-21 14:37:27 [INFO]: GET /api/customers
+2025-07-21 14:37:27 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:37:27 [ERROR]: Error fetching customers:
+2025-07-21 14:37:29 [INFO]: GET /api/customers
+2025-07-21 14:37:29 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:37:29 [ERROR]: Error fetching customers:
+2025-07-21 14:37:53 [INFO]: Server running on port 5000
+2025-07-21 14:37:53 [INFO]: Database connected successfully
+2025-07-21 14:38:04 [INFO]: GET /api/customers
+2025-07-21 14:38:04 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:38:04 [ERROR]: Error fetching customers:
+2025-07-21 14:39:15 [INFO]: Server running on port 5000
+2025-07-21 14:39:15 [INFO]: Database connected successfully
+2025-07-21 14:39:20 [INFO]: GET /api/customers
+2025-07-21 14:39:20 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:39:20 [ERROR]: Error fetching customers:
+2025-07-21 14:39:54 [INFO]: Server running on port 5000
+2025-07-21 14:39:54 [INFO]: Database connected successfully
+2025-07-21 14:40:20 [INFO]: Server running on port 5000
+2025-07-21 14:40:20 [INFO]: Database connected successfully
+2025-07-21 14:40:25 [INFO]: GET /api/customers
+2025-07-21 14:40:25 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:40:25 [ERROR]: Error fetching customers:
+2025-07-21 14:41:54 [INFO]: POST /api/login
+2025-07-21 14:43:45 [INFO]: POST /api/customers
+2025-07-21 14:44:10 [INFO]: GET /api/customers
+2025-07-21 14:44:10 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:44:10 [ERROR]: Error fetching customers:
+2025-07-21 14:44:42 [INFO]: Server running on port 5000
+2025-07-21 14:44:42 [INFO]: Database connected successfully
+2025-07-21 14:44:51 [INFO]: GET /api/customers
+2025-07-21 14:44:51 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:44:51 [ERROR]: Error fetching customers:
+2025-07-21 14:44:54 [INFO]: GET /api/customers
+2025-07-21 14:44:54 [ERROR]: Database error fetching customers: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:44:54 [ERROR]: Error fetching customers:
+2025-07-21 14:49:50 [INFO]: Server running on port 5000
+2025-07-21 14:49:50 [INFO]: Database connected successfully
+2025-07-21 14:50:26 [INFO]: Server running on port 5000
+2025-07-21 14:50:26 [INFO]: Database connected successfully
+2025-07-21 14:50:32 [INFO]: GET /api/customers
+2025-07-21 14:51:30 [INFO]: GET /api/customers/1
+2025-07-21 14:51:30 [ERROR]: Database error fetching customer by ID: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:51:30 [ERROR]: Error fetching customer:
+2025-07-21 14:51:45 [INFO]: GET /api/customers/:1
+2025-07-21 14:51:45 [ERROR]: Database error fetching customer by ID: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:51:45 [ERROR]: Error fetching customer:
+2025-07-21 14:52:38 [INFO]: GET /api/customers/4
+2025-07-21 14:52:38 [ERROR]: Database error fetching customer by ID: Unknown column 'ci.customer_active_status' in 'field list'
+2025-07-21 14:52:38 [ERROR]: Error fetching customer:
+2025-07-21 14:54:00 [INFO]: Server running on port 5000
+2025-07-21 14:54:00 [INFO]: Database connected successfully
+2025-07-21 14:54:03 [INFO]: Server running on port 5000
+2025-07-21 14:54:03 [INFO]: Database connected successfully
+2025-07-21 14:54:07 [INFO]: Server running on port 5000
+2025-07-21 14:54:07 [INFO]: Database connected successfully
+2025-07-21 14:54:12 [INFO]: GET /api/customers/4
+2025-07-21 14:54:23 [INFO]: GET /api/customers/1
+2025-07-21 14:54:33 [INFO]: GET /api/customers/2
+2025-07-21 14:54:44 [INFO]: GET /api/customers/3
+2025-07-21 14:54:54 [INFO]: GET /api/customers/4
