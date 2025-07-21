@@ -83,19 +83,24 @@ const customerService = {
     const connection = await db.getConnection();
     try {
       await connection.beginTransaction();
+
+      // Update customer_identifier table
       await connection.query(
-        "UPDATE customer_identifier SET customer_email = ?, customer_phone_number = ?, customer_active_status = ? WHERE customer_id = ?",
+        "UPDATE customer_identifier SET customer_email = ?, customer_phone_number = ? WHERE customer_id = ?",
+        [email, phone_number, id]
+      );
+
+      // Update customer_info table 
+      await connection.query(
+        "UPDATE customer_info SET customer_first_name = ?, customer_last_name = ?, customer_active_status = ? WHERE customer_id = ?",
         [
-          email,
-          phone_number,
+          first_name,
+          last_name,
           active_status !== undefined ? active_status : 1,
           id,
         ]
       );
-      await connection.query(
-        "UPDATE customer_info SET customer_first_name = ?, customer_last_name = ? WHERE customer_id = ?",
-        [first_name, last_name, id]
-      );
+
       await connection.commit();
       return await this.getCustomerById(id);
     } catch (err) {
@@ -109,8 +114,9 @@ const customerService = {
 
   async deleteCustomer(id) {
     try {
+      // Update active_status in the correct table: customer_info
       const [result] = await db.query(
-        "UPDATE customer_identifier SET customer_active_status = 0 WHERE customer_id = ?",
+        "UPDATE customer_info SET customer_active_status = 0 WHERE customer_id = ?",
         [id]
       );
       return result.affectedRows > 0;

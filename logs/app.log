@@ -188,3 +188,18 @@
 2025-07-21 14:54:54 [INFO]: GET /api/customers/4
 2025-07-21 14:55:07 [INFO]: Server running on port 5000
 2025-07-21 14:55:07 [INFO]: Database connected successfully
+2025-07-21 14:57:17 [INFO]: Server running on port 5000
+2025-07-21 14:57:17 [INFO]: Database connected successfully
+2025-07-21 14:57:20 [INFO]: GET /api/customers/4
+2025-07-21 14:57:28 [INFO]: GET /api/customers/3
+2025-07-21 14:57:35 [INFO]: GET /api/customers/1
+2025-07-21 14:57:40 [INFO]: GET /api/customers/2
+2025-07-21 14:57:46 [INFO]: GET /api/customers/5
+2025-07-21 14:58:27 [INFO]: Server running on port 5000
+2025-07-21 14:58:27 [INFO]: Database connected successfully
+2025-07-21 14:58:56 [INFO]: DELETE /api/customers/1
+2025-07-21 14:58:56 [ERROR]: Database error deleting customer: Unknown column 'customer_active_status' in 'field list'
+2025-07-21 14:58:56 [ERROR]: Error deleting customer:
+2025-07-21 15:02:47 [INFO]: Server running on port 5000
+2025-07-21 15:02:47 [INFO]: Database connected successfully
+2025-07-21 15:02:54 [INFO]: DELETE /api/customers/1
