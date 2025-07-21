@@ -60,13 +60,13 @@ const customerService = {
     try {
       const [rows] = await db.query(
         `
-             SELECT ci.customer_id, ci.customer_email, ci.customer_phone_number, ci.customer_hash,
-                    ci.customer_added_date, ci.customer_active_status, cinfo.customer_first_name,
-                    cinfo.customer_last_name
-             FROM customer_identifier ci
-             JOIN customer_info cinfo ON ci.customer_id = cinfo.customer_id
-             WHERE ci.customer_id = ? AND ci.customer_active_status = 1
-           `,
+    SELECT ci.customer_id, ci.customer_email, ci.customer_phone_number, ci.customer_hash,
+           ci.customer_added_date, cinfo.customer_active_status, cinfo.customer_first_name,
+           cinfo.customer_last_name
+    FROM customer_identifier ci
+    JOIN customer_info cinfo ON ci.customer_id = cinfo.customer_id
+    WHERE ci.customer_id = ? AND cinfo.customer_active_status = 1
+  `,
         [id]
       );
       return rows[0] || null;
