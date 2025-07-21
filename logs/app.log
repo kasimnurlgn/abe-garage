@@ -4,3 +4,34 @@
 2025-07-20 14:36:36 [WARN]: No token provided for request:
 2025-07-20 14:36:47 [INFO]: POST /api/customers
 2025-07-20 14:36:47 [WARN]: No token provided for request:
+2025-07-20 14:37:21 [INFO]: Server running on port 5000
+2025-07-20 14:37:22 [INFO]: Database connected successfully
+2025-07-20 15:14:28 [INFO]: Server running on port 5000
+2025-07-20 15:14:29 [INFO]: Database connected successfully
+2025-07-20 15:15:40 [INFO]: POST /api/install
+2025-07-20 15:15:40 [WARN]: No token provided for request:
+2025-07-20 15:15:43 [INFO]: POST /api/install
+2025-07-20 15:15:43 [WARN]: No token provided for request:
+2025-07-20 15:16:15 [INFO]: POST /api/install
+2025-07-20 15:16:15 [WARN]: No token provided for request:
+2025-07-20 15:16:22 [INFO]: POST /api/install
+2025-07-20 15:16:22 [WARN]: No token provided for request:
+2025-07-20 15:19:36 [INFO]: POST /api/install
+2025-07-20 15:19:36 [WARN]: No token provided for request:
+2025-07-20 21:58:32 [INFO]: Server running on port 5000
+2025-07-20 21:58:33 [INFO]: Database connected successfully
+2025-07-21 00:25:26 [INFO]: Server running on port 5000
+2025-07-21 00:25:26 [ERROR]: Database connection failed:
+2025-07-21 10:03:15 [INFO]: Server running on port 5000
+2025-07-21 10:03:15 [INFO]: Database connected successfully
+2025-07-21 10:06:24 [INFO]: Server running on port 5000
+2025-07-21 10:06:25 [INFO]: Database connected successfully
+2025-07-21 10:07:09 [INFO]: Server running on port 5000
+2025-07-21 10:07:09 [INFO]: Database connected successfully
+2025-07-21 10:10:43 [INFO]: Server running on port 5000
+2025-07-21 10:10:43 [INFO]: Database connected successfully
+2025-07-21 10:11:36 [INFO]: Server running on port 5000
+2025-07-21 10:11:36 [INFO]: Database connected successfully
+2025-07-21 10:50:50 [INFO]: Server running on port 5000
+2025-07-21 10:50:50 [INFO]: Database connected successfully
+2025-07-21 11:00:54 [INFO]: POST /api/login

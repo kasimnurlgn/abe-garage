@@ -60,6 +60,12 @@ app.use((req, res) => {
 // Error handling middleware
 app.use(errorHandler);
 
+// generate hashed password for admin
+const { hashPassword } = require("./utils/password");
+hashPassword("SecureAdminPass123!").then((hash) => {
+  console.log("hashed password: " + hash);
+});
+
 // Test database connection on startup
 db.query("SELECT 1")
   .then(() => logger.info("Database connected successfully"))
