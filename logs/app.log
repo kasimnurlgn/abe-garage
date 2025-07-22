@@ -203,3 +203,6 @@
 2025-07-21 15:02:47 [INFO]: Server running on port 5000
 2025-07-21 15:02:47 [INFO]: Database connected successfully
 2025-07-21 15:02:54 [INFO]: DELETE /api/customers/1
+2025-07-21 15:04:25 [INFO]: Server running on port 5000
+2025-07-21 15:04:25 [INFO]: Database connected successfully
+2025-07-21 15:07:15 [INFO]: PUT /api/customers/1
