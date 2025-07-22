@@ -1,6 +1,8 @@
 const db = require("../config/db.config");
 const { hashPassword } = require("../utils/password");
 const logger = require("../utils/logger");
+const dotenv = require("dotenv");
+dotenv.config();
 
 const installService = {
   async initializeDatabase() {
@@ -8,7 +10,7 @@ const installService = {
     try {
       await connection.beginTransaction();
 
-      // Check if tables exist (schema.sql should already be applied, but verify key tables)
+      // Check if tables exist
       const [tables] = await connection.query(
         `
         SELECT COUNT(*) AS count
@@ -23,14 +25,14 @@ const installService = {
         );
       }
 
-      // Seed initial Admin user (idempotent: skip if email exists)
-      const adminEmail = "admin@abesgarage.com";
+      // Seed initial Admin user
+      const adminEmail = process.env.ADMIN_EMAIL;
       const [existingAdmin] = await connection.query(
         "SELECT employee_id FROM employee WHERE employee_email = ?",
         [adminEmail]
       );
       if (existingAdmin.length === 0) {
-        const hashedPassword = await hashPassword("SecureAdminPass123!"); // Change in production
+        const hashedPassword = await hashPassword(process.env.ADMIN_PASSWORD);
         const [employeeResult] = await connection.query(
           "INSERT INTO employee (employee_email, employee_active_status) VALUES (?, 1)",
           [adminEmail]
@@ -46,7 +48,7 @@ const installService = {
         );
         await connection.query(
           "INSERT INTO employee_role (employee_id, company_role_id) VALUES (?, ?)",
-          [employeeId, 1] // 1 = Admin role from company_roles
+          [employeeId, 1]
         );
         logger.info(`Created initial Admin user: ${adminEmail}`);
       } else {
@@ -55,7 +57,7 @@ const installService = {
         );
       }
 
-      // Seed default services in common_services (idempotent: skip if service_name exists)
+      // Seed default services in common_services
       const defaultServices = [
         {
           name: "Oil Change",

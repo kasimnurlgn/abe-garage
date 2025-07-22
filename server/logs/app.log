@@ -206,3 +206,39 @@
 2025-07-21 15:04:25 [INFO]: Server running on port 5000
 2025-07-21 15:04:25 [INFO]: Database connected successfully
 2025-07-21 15:07:15 [INFO]: PUT /api/customers/1
+2025-07-22 07:46:20 [INFO]: Server running on port 5000
+2025-07-22 07:46:21 [INFO]: Database connected successfully
+2025-07-22 07:46:41 [INFO]: POST /api/login
+2025-07-22 07:51:01 [INFO]: POST /api/employee
+2025-07-22 07:52:38 [INFO]: POST /api/employee
+2025-07-22 07:53:55 [INFO]: POST /api/employees
+2025-07-22 07:55:44 [INFO]: GET /api/employees
+2025-07-22 07:56:37 [INFO]: PUT /api/employees
+2025-07-22 07:56:56 [INFO]: POST /api/employees
+2025-07-22 07:56:56 [ERROR]: Database error creating employee: Duplicate entry 'juwi@example.com' for key 'employee_email'
+2025-07-22 07:56:56 [ERROR]: Error creating employee:
+2025-07-22 07:57:05 [INFO]: PUT /api/employees
+2025-07-22 07:58:17 [INFO]: DELETE /api/employees/4
+2025-07-22 07:58:33 [INFO]: GET /api/employees
+2025-07-22 07:58:53 [INFO]: POST /api/employees
+2025-07-22 07:58:53 [ERROR]: Database error creating employee: Duplicate entry 'juwi@example.com' for key 'employee_email'
+2025-07-22 07:58:53 [ERROR]: Error creating employee:
+2025-07-22 07:59:37 [INFO]: POST /api/employees
+2025-07-22 07:59:54 [INFO]: GET /api/employees
+2025-07-22 08:01:02 [INFO]: PUT /api/employees/7
+2025-07-22 08:08:28 [INFO]: POST /api/install
+2025-07-22 08:08:28 [INFO]: Admin user admin@abesgarage.com already exists, skipping creation.
+2025-07-22 08:08:28 [INFO]: Seeded service: Oil Change
+2025-07-22 08:08:28 [INFO]: Seeded service: Tire Rotation
+2025-07-22 08:08:28 [INFO]: Seeded service: Brake Inspection
+2025-07-22 08:08:28 [INFO]: Database initialization and seeding completed.
+2025-07-22 08:12:51 [INFO]: Server running on port 5000
+2025-07-22 08:12:52 [INFO]: Database connected successfully
+2025-07-22 08:14:03 [INFO]: Server running on port 5000
+2025-07-22 08:14:03 [INFO]: Database connected successfully
+2025-07-22 08:14:51 [INFO]: Server running on port 5000
+2025-07-22 08:14:51 [INFO]: Database connected successfully
+2025-07-22 08:15:12 [INFO]: Server running on port 5000
+2025-07-22 08:15:12 [INFO]: Database connected successfully
+2025-07-22 08:15:18 [INFO]: Server running on port 5000
+2025-07-22 08:15:18 [INFO]: Database connected successfully
