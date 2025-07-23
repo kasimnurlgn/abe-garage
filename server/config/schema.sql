@@ -1,6 +1,3 @@
--- Creating database schema for Abe's Garage App
--- All tables are designed based on the provided document, following normalization principles
--- Using InnoDB engine for foreign key support
 
 -- Table 1: employee
 CREATE TABLE IF NOT EXISTS `employee` (

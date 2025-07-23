@@ -5,7 +5,7 @@ const authMiddleware = require("../middlewares/auth.middleware");
 
 // Middleware to check for Admin or Manager role
 const restrictToAdminOrManager = (req, res, next) => {
-  const userRole = req.user.role; 
+  const userRole = req.user.role;
   if (userRole === "Admin" || userRole === "Manager") {
     next();
   } else {

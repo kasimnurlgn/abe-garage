@@ -2,7 +2,6 @@ const vehicleService = require("../services/vehicle.service");
 const logger = require("../utils/logger");
 
 const vehicleController = {
-  // Get all vehicles
   async getAllVehicles(req, res) {
     try {
       const vehicles = await vehicleService.getAllVehicles();
@@ -13,32 +12,42 @@ const vehicleController = {
     }
   },
 
-  // Create a new vehicle
   async createVehicle(req, res) {
     try {
       const {
         customer_id,
-        vehicle_vin,
+        vehicle_serial_number,
         vehicle_make,
         vehicle_model,
         vehicle_year,
+        vehicle_type,
+        vehicle_mileage,
+        vehicle_tag,
+        vehicle_color,
       } = req.body;
       if (
         !customer_id ||
-        !vehicle_vin ||
+        !vehicle_serial_number ||
         !vehicle_make ||
         !vehicle_model ||
-        !vehicle_year
+        !vehicle_year ||
+        !vehicle_type ||
+        !vehicle_mileage ||
+        !vehicle_tag ||
+        !vehicle_color
       ) {
         return res.status(400).json({ error: "Missing required fields" });
       }
       const vehicleData = {
         customer_id,
-        vehicle_vin,
+        vehicle_serial_number,
         vehicle_make,
         vehicle_model,
         vehicle_year,
-        vehicle_active_status: 1,
+        vehicle_type,
+        vehicle_mileage,
+        vehicle_tag,
+        vehicle_color,
       };
       const newVehicle = await vehicleService.createVehicle(vehicleData);
       res.status(201).json(newVehicle);
@@ -48,7 +57,6 @@ const vehicleController = {
     }
   },
 
-  // Get vehicle by ID
   async getVehicleById(req, res) {
     try {
       const { id } = req.params;
@@ -63,25 +71,30 @@ const vehicleController = {
     }
   },
 
-  // Update vehicle
   async updateVehicle(req, res) {
     try {
       const { id } = req.params;
       const {
         customer_id,
-        vehicle_vin,
+        vehicle_serial_number,
         vehicle_make,
         vehicle_model,
         vehicle_year,
-        vehicle_active_status,
+        vehicle_type,
+        vehicle_mileage,
+        vehicle_tag,
+        vehicle_color,
       } = req.body;
       const vehicleData = {
         customer_id,
-        vehicle_vin,
+        vehicle_serial_number,
         vehicle_make,
         vehicle_model,
         vehicle_year,
-        vehicle_active_status,
+        vehicle_type,
+        vehicle_mileage,
+        vehicle_tag,
+        vehicle_color,
       };
       const updatedVehicle = await vehicleService.updateVehicle(
         id,
@@ -97,7 +110,6 @@ const vehicleController = {
     }
   },
 
-  // Delete vehicle
   async deleteVehicle(req, res) {
     try {
       const { id } = req.params;
