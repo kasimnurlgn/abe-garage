@@ -420,3 +420,422 @@
 2025-07-23 06:41:46 [ERROR]: Error creating vehicle:
 2025-07-23 06:42:45 [INFO]: POST /api/vehicles
 2025-07-23 06:43:05 [INFO]: GET /api/vehicles
+2025-07-23 06:44:08 [INFO]: GET /api/vehicles/2
+2025-07-23 06:45:13 [INFO]: PUT /api/vehicles/2
+2025-07-23 06:45:28 [INFO]: PUT /api/vehicles
+2025-07-23 06:45:38 [INFO]: GET /api/vehicles
+2025-07-23 06:46:16 [INFO]: DELETE /api/vehicles/1
+2025-07-23 06:46:26 [INFO]: GET /api/vehicles
+2025-07-23 06:55:03 [INFO]: POST /api/orders
+2025-07-23 06:55:03 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-23 06:55:03 [ERROR]: Error creating order:
+2025-07-23 06:55:41 [INFO]: POST /api/orders
+2025-07-23 06:55:41 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-23 06:55:41 [ERROR]: Error creating order:
+2025-07-23 06:56:39 [INFO]: POST /api/orders
+2025-07-23 06:56:39 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-23 06:56:39 [ERROR]: Error creating order:
+2025-07-23 06:57:16 [INFO]: POST /api/orders
+2025-07-23 06:57:16 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-23 06:57:16 [ERROR]: Error creating order:
+2025-07-23 06:57:38 [INFO]: POST /api/orders
+2025-07-23 06:57:38 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-23 06:57:38 [ERROR]: Error creating order:
+2025-07-23 06:58:11 [INFO]: POST /api/orders
+2025-07-23 06:58:11 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-23 06:58:11 [ERROR]: Error creating order:
+2025-07-23 07:03:43 [INFO]: POST /api/orders
+2025-07-23 07:03:43 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-23 07:03:43 [ERROR]: Error creating order:
+2025-07-23 07:59:09 [INFO]: POST /api/orders
+2025-07-23 07:59:09 [ERROR]: Invalid token:
+2025-07-23 07:59:40 [INFO]: POST /api/login
+2025-07-23 08:00:37 [ERROR]: Error: Expected ',' or '}' after property value in JSON at position 273 (line 9 column 6), Stack: SyntaxError: Expected ',' or '}' after property value in JSON at position 273 (line 9 column 6)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-07-23 08:01:41 [INFO]: Server running on port 5000
+2025-07-23 08:01:41 [INFO]: Database connected successfully
+2025-07-23 08:10:07 [ERROR]: Error: Expected ',' or '}' after property value in JSON at position 273 (line 9 column 6), Stack: SyntaxError: Expected ',' or '}' after property value in JSON at position 273 (line 9 column 6)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-07-23 08:11:27 [INFO]: POST /api/orders
+2025-07-23 08:11:27 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-23 08:11:27 [ERROR]: Error creating order:
+2025-07-23 08:13:32 [INFO]: POST /api/orders
+2025-07-23 08:13:32 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-23 08:13:32 [ERROR]: Error creating order:
+2025-07-23 08:13:47 [INFO]: POST /api/orders
+2025-07-23 08:13:47 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-23 08:13:47 [ERROR]: Error creating order:
+2025-07-24 06:19:10 [INFO]: Server running on port 5000
+2025-07-24 06:19:11 [INFO]: Database connected successfully
+2025-07-24 13:50:35 [INFO]: Server running on port 5000
+2025-07-24 13:50:35 [INFO]: Database connected successfully
+2025-07-24 13:52:57 [INFO]: POST /api/login/
+2025-07-24 13:53:13 [INFO]: POST /api/login/
+2025-07-24 13:53:43 [INFO]: POST /api/orders
+2025-07-24 14:10:08 [INFO]: Server running on port 5000
+2025-07-24 14:10:08 [INFO]: Database connected successfully
+2025-07-24 14:11:51 [ERROR]: Error: Expected double-quoted property name in JSON at position 122 (line 8 column 1), Stack: SyntaxError: Expected double-quoted property name in JSON at position 122 (line 8 column 1)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-07-24 14:12:17 [INFO]: PUT /api/customers
+2025-07-24 14:12:23 [INFO]: POST /api/customers
+2025-07-24 14:13:17 [INFO]: POST /api/orders
+2025-07-24 14:13:17 [ERROR]: Database error creating order: Unknown column 'order_number' in 'field list'
+2025-07-24 14:13:17 [ERROR]: Error creating order:
+2025-07-24 14:17:20 [INFO]: Server running on port 5000
+2025-07-24 14:17:21 [INFO]: Database connected successfully
+2025-07-24 14:17:26 [INFO]: POST /api/orders
+2025-07-24 14:17:26 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:17:26 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:17:26 [ERROR]: Error creating order:
+2025-07-24 14:18:05 [INFO]: GET /api/customers
+2025-07-24 14:19:18 [INFO]: POST /api/login
+2025-07-24 14:20:14 [INFO]: POST /api/orders
+2025-07-24 14:20:14 [ERROR]: Database error creating order: Duplicate entry 'hash123' for key 'order_hash'
+2025-07-24 14:20:14 [ERROR]: Error creating order:
+2025-07-24 14:20:28 [INFO]: POST /api/orders
+2025-07-24 14:22:25 [INFO]: POST /api/orders
+2025-07-24 14:22:25 [ERROR]: Database error creating order: Duplicate entry 'hash123' for key 'order_hash'
+2025-07-24 14:22:25 [ERROR]: Error creating order:
+2025-07-24 14:25:26 [INFO]: Server running on port 5000
+2025-07-24 14:25:26 [INFO]: Database connected successfully
+2025-07-24 14:26:01 [INFO]: POST /api/orders
+2025-07-24 14:26:01 [ERROR]: Database error creating order: Duplicate entry 'hash123' for key 'order_hash'
+2025-07-24 14:26:01 [ERROR]: Error creating order:
+2025-07-24 14:26:14 [INFO]: POST /api/orders
+2025-07-24 14:26:14 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:26:14 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:26:14 [ERROR]: Error creating order:
+2025-07-24 14:26:23 [INFO]: POST /api/orders
+2025-07-24 14:26:24 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:26:24 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:26:24 [ERROR]: Error creating order:
+2025-07-24 14:26:44 [INFO]: POST /api/orders
+2025-07-24 14:26:44 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:26:44 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:26:44 [ERROR]: Error creating order:
+2025-07-24 14:30:24 [INFO]: POST /api/orders
+2025-07-24 14:30:24 [ERROR]: Database error creating order: Duplicate entry 'hash134' for key 'order_hash'
+2025-07-24 14:30:24 [ERROR]: Error creating order:
+2025-07-24 14:31:31 [INFO]: POST /api/orders
+2025-07-24 14:31:31 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:31:31 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:31:31 [ERROR]: Error creating order:
+2025-07-24 14:36:16 [INFO]: POST /api/order
+2025-07-24 14:36:58 [INFO]: POST /api/orders
+2025-07-24 14:36:59 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:36:59 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:36:59 [ERROR]: Error creating order:
+2025-07-24 14:37:14 [INFO]: POST /api/orders
+2025-07-24 14:37:14 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:37:14 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:37:14 [ERROR]: Error creating order:
+2025-07-24 14:44:19 [INFO]: POST /api/login
+2025-07-24 14:45:18 [INFO]: POST /api/orders
+2025-07-24 14:45:18 [ERROR]: Database error creating order: Duplicate entry 'hash124' for key 'order_hash'
+2025-07-24 14:45:18 [ERROR]: Error creating order:
+2025-07-24 14:45:29 [INFO]: POST /api/orders
+2025-07-24 14:45:29 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:45:29 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:45:29 [ERROR]: Error creating order:
+2025-07-24 14:50:24 [INFO]: Server running on port 5000
+2025-07-24 14:50:24 [INFO]: Database connected successfully
+2025-07-24 14:50:54 [INFO]: Server running on port 5000
+2025-07-24 14:50:54 [INFO]: Database connected successfully
+2025-07-24 14:51:31 [INFO]: POST /api/orders
+2025-07-24 14:51:31 [ERROR]: Database error creating order: Duplicate entry 'hash124' for key 'order_hash'
+2025-07-24 14:51:31 [ERROR]: Error creating order:
+2025-07-24 14:51:52 [INFO]: POST /api/orders
+2025-07-24 14:51:52 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:51:52 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:51:52 [ERROR]: Error creating order:
+2025-07-24 14:52:02 [INFO]: Server running on port 5000
+2025-07-24 14:52:02 [INFO]: Database connected successfully
+2025-07-24 14:52:04 [INFO]: Server running on port 5000
+2025-07-24 14:52:04 [INFO]: Database connected successfully
+2025-07-24 14:52:06 [INFO]: POST /api/orders
+2025-07-24 14:52:06 [ERROR]: Database error creating order: Duplicate entry 'hash1hgfghvjg24' for key 'order_hash'
+2025-07-24 14:52:06 [ERROR]: Error creating order:
+2025-07-24 14:52:16 [INFO]: POST /api/orders
+2025-07-24 14:52:17 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:52:17 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:52:17 [ERROR]: Error creating order:
+2025-07-24 14:52:45 [INFO]: POST /api/login
+2025-07-24 14:53:36 [INFO]: POST /api/orders
+2025-07-24 14:53:36 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:53:36 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:53:36 [ERROR]: Error creating order:
+2025-07-24 14:53:42 [INFO]: POST /api/orders
+2025-07-24 14:53:42 [ERROR]: Database error creating order: Duplicate entry 'hash421' for key 'order_hash'
+2025-07-24 14:53:42 [ERROR]: Error creating order:
+2025-07-24 14:53:54 [INFO]: POST /api/orders
+2025-07-24 14:53:54 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:53:54 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:53:54 [ERROR]: Error creating order:
+2025-07-24 14:54:27 [INFO]: POST /api/orders
+2025-07-24 14:54:28 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:54:28 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:54:28 [ERROR]: Error creating order:
+2025-07-24 14:54:30 [INFO]: POST /api/orders
+2025-07-24 14:54:30 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:54:30 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:54:30 [ERROR]: Error creating order:
+2025-07-24 14:55:01 [INFO]: Server running on port 5000
+2025-07-24 14:55:01 [INFO]: Database connected successfully
+2025-07-24 14:55:22 [INFO]: POST /api/orders
+2025-07-24 14:55:22 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:55:22 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:55:22 [ERROR]: Error creating order:
+2025-07-24 14:55:48 [INFO]: POST /api/login
+2025-07-24 14:56:39 [INFO]: POST /api/orders
+2025-07-24 14:56:39 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:56:39 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:56:39 [ERROR]: Error creating order:
+2025-07-24 14:56:57 [INFO]: POST /api/orders
+2025-07-24 14:56:57 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 14:56:57 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 14:56:57 [ERROR]: Error creating order:
+2025-07-24 15:01:49 [INFO]: Server running on port 5000
+2025-07-24 15:01:49 [INFO]: Database connected successfully
+2025-07-24 15:01:56 [INFO]: POST /api/orders
+2025-07-24 15:01:56 [INFO]: Entering createOrder
+2025-07-24 15:01:56 [ERROR]: Database error creating order: Duplicate entry 'kdsmvkldfnbklfn' for key 'order_hash'
+2025-07-24 15:01:56 [ERROR]: Error creating order:
+2025-07-24 15:02:08 [INFO]: POST /api/orders
+2025-07-24 15:02:08 [INFO]: Entering createOrder
+2025-07-24 15:02:08 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 15:02:08 [ERROR]: Database error creating order: Order hash required for public access
+2025-07-24 15:02:08 [ERROR]: Error creating order:
+2025-07-24 15:06:43 [INFO]: Server running on port 5000
+2025-07-24 15:06:43 [INFO]: Database connected successfully
+2025-07-24 15:07:06 [INFO]: POST /api/orders
+2025-07-24 15:07:06 [INFO]: Entering createOrder
+2025-07-24 15:09:52 [INFO]: POST /api/orders
+2025-07-24 15:09:52 [INFO]: Entering createOrder
+2025-07-24 15:10:18 [INFO]: POST /api/orders
+2025-07-24 15:10:19 [INFO]: Entering createOrder
+2025-07-24 15:10:19 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-24 15:10:19 [ERROR]: Error creating order:
+2025-07-24 15:10:27 [INFO]: POST /api/orders
+2025-07-24 15:10:27 [INFO]: Entering createOrder
+2025-07-24 15:10:27 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-24 15:10:27 [ERROR]: Error creating order:
+2025-07-24 15:10:35 [INFO]: POST /api/orders
+2025-07-24 15:10:35 [INFO]: Entering createOrder
+2025-07-24 15:12:49 [INFO]: POST /api/orders
+2025-07-24 15:12:49 [INFO]: Entering createOrder
+2025-07-24 15:12:59 [INFO]: GET /api/orders
+2025-07-24 15:12:59 [INFO]: Entering getAllOrders
+2025-07-24 15:13:14 [INFO]: GET /api/orders/2
+2025-07-24 15:13:14 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 15:13:18 [INFO]: GET /api/orders/7
+2025-07-24 15:13:18 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 15:13:27 [INFO]: DELETE /api/orders/7
+2025-07-24 15:13:27 [INFO]: Entering deleteOrder
+2025-07-24 15:13:32 [INFO]: DELETE /api/orders/3
+2025-07-24 15:13:32 [INFO]: Entering deleteOrder
+2025-07-24 15:13:36 [INFO]: DELETE /api/orders/7
+2025-07-24 15:13:36 [INFO]: Entering deleteOrder
+2025-07-24 15:13:44 [INFO]: GET /api/orders/7
+2025-07-24 15:13:44 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 15:13:51 [INFO]: GET /api/orders/4
+2025-07-24 15:13:51 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 15:13:56 [INFO]: GET /api/orders/8
+2025-07-24 15:13:56 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 15:14:20 [INFO]: GET /api/orders/31
+2025-07-24 15:14:20 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 15:14:28 [INFO]: DELETE /api/orders/31
+2025-07-24 15:14:28 [INFO]: Entering deleteOrder
+2025-07-24 15:14:58 [INFO]: DELETE /api/orders/20
+2025-07-24 15:14:58 [INFO]: Entering deleteOrder
+2025-07-24 15:15:14 [INFO]: GET /api/orders/21
+2025-07-24 15:15:14 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 15:16:15 [INFO]: PUT /api/orders/21
+2025-07-24 15:16:15 [INFO]: Entering updateOrder
+2025-07-24 15:16:15 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 15:16:15 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 15:16:15 [ERROR]: Error updating order:
+2025-07-24 15:16:45 [INFO]: PUT /api/orders/21
+2025-07-24 15:16:45 [INFO]: Entering updateOrder
+2025-07-24 15:16:45 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 15:16:45 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 15:16:45 [ERROR]: Error updating order:
+2025-07-24 15:17:17 [INFO]: POST /api/orders/21
+2025-07-24 15:17:21 [INFO]: POST /api/orders
+2025-07-24 15:17:21 [INFO]: Entering createOrder
+2025-07-24 15:17:21 [ERROR]: Database error creating order: Invalid customer_id
+2025-07-24 15:17:21 [ERROR]: Error creating order:
+2025-07-24 15:17:32 [INFO]: POST /api/orders
+2025-07-24 15:17:32 [INFO]: Entering createOrder
+2025-07-24 15:17:32 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-24 15:17:32 [ERROR]: Error creating order:
+2025-07-24 15:17:39 [INFO]: POST /api/orders
+2025-07-24 15:17:39 [INFO]: Entering createOrder
+2025-07-24 15:17:39 [ERROR]: Database error creating order: Invalid employee_id
+2025-07-24 15:17:39 [ERROR]: Error creating order:
+2025-07-24 15:17:53 [INFO]: POST /api/orders
+2025-07-24 15:17:53 [INFO]: Entering createOrder
+2025-07-24 15:17:53 [ERROR]: Database error creating order: Invalid service_id: 4
+2025-07-24 15:17:53 [ERROR]: Error creating order:
+2025-07-24 15:18:08 [INFO]: POST /api/orders
+2025-07-24 15:18:08 [INFO]: Entering createOrder
+2025-07-24 15:18:08 [ERROR]: Database error creating order: Invalid service_id: 9
+2025-07-24 15:18:08 [ERROR]: Error creating order:
+2025-07-24 15:18:18 [INFO]: POST /api/orders
+2025-07-24 15:18:18 [INFO]: Entering createOrder
+2025-07-24 15:18:18 [ERROR]: Database error creating order: Invalid service_id: 4
+2025-07-24 15:18:18 [ERROR]: Error creating order:
+2025-07-24 15:18:25 [INFO]: POST /api/orders
+2025-07-24 15:18:25 [INFO]: Entering createOrder
+2025-07-24 15:18:50 [INFO]: PUT /api/orders/32
+2025-07-24 15:18:50 [INFO]: Entering updateOrder
+2025-07-24 15:18:50 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 15:18:50 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 15:18:50 [ERROR]: Error updating order:
+2025-07-24 15:19:35 [INFO]: PUT /api/orders/32
+2025-07-24 15:19:35 [INFO]: Entering updateOrder
+2025-07-24 15:19:35 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 15:19:35 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 15:19:35 [ERROR]: Error updating order:
+2025-07-24 15:20:07 [INFO]: PUT /api/orders/32
+2025-07-24 15:20:07 [INFO]: Entering updateOrder
+2025-07-24 15:20:07 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 15:20:07 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 15:20:07 [ERROR]: Error updating order:
+2025-07-24 15:20:22 [INFO]: PUT /api/orders/32
+2025-07-24 15:20:22 [INFO]: Entering updateOrder
+2025-07-24 15:20:22 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 15:20:22 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 15:20:22 [ERROR]: Error updating order:
+2025-07-24 15:21:39 [INFO]: PUT /api/orders
+2025-07-24 15:21:46 [INFO]: POST /api/orders
+2025-07-24 15:21:46 [INFO]: Entering createOrder
+2025-07-24 15:21:46 [ERROR]: Database error creating order: Invalid customer_id
+2025-07-24 15:21:46 [ERROR]: Error creating order:
+2025-07-24 15:21:55 [INFO]: POST /api/orders
+2025-07-24 15:21:55 [INFO]: Entering createOrder
+2025-07-24 15:21:55 [ERROR]: Database error creating order: Invalid service_id: 4
+2025-07-24 15:21:55 [ERROR]: Error creating order:
+2025-07-24 15:22:07 [INFO]: POST /api/orders
+2025-07-24 15:22:07 [INFO]: Entering createOrder
+2025-07-24 15:22:58 [INFO]: PUT /api/orders/33
+2025-07-24 15:22:58 [INFO]: Entering updateOrder
+2025-07-24 15:22:58 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 15:22:58 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 15:22:58 [ERROR]: Error updating order:
+2025-07-24 15:24:47 [INFO]: PUT /api/orders/33
+2025-07-24 15:24:47 [INFO]: Entering updateOrder
+2025-07-24 15:24:47 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 15:24:47 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 15:24:47 [ERROR]: Error updating order:
+2025-07-24 15:28:02 [INFO]: GET /api/orders/33
+2025-07-24 15:28:02 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 16:55:44 [INFO]: PUT /api/orders/33
+2025-07-24 16:55:44 [ERROR]: Invalid token:
+2025-07-24 16:55:57 [INFO]: POST /api/login
+2025-07-24 16:56:20 [INFO]: POST /api/login
+2025-07-24 16:56:52 [INFO]: GET /api/orders
+2025-07-24 16:56:52 [INFO]: Entering getAllOrders
+2025-07-24 16:57:02 [INFO]: GET /api/orders/30
+2025-07-24 16:57:02 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 16:59:21 [INFO]: PUT /api/orders/30
+2025-07-24 16:59:21 [INFO]: Entering updateOrder
+2025-07-24 16:59:21 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 16:59:21 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 16:59:21 [ERROR]: Error updating order:
+2025-07-24 17:05:25 [INFO]: PUT /api/orders/30
+2025-07-24 17:05:25 [INFO]: Entering updateOrder
+2025-07-24 17:05:26 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 17:05:26 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 17:05:26 [ERROR]: Error updating order:
+2025-07-24 17:23:09 [INFO]: Server running on port 5000
+2025-07-24 17:23:10 [INFO]: Database connected successfully
+2025-07-24 17:23:17 [INFO]: PUT /api/orders/30
+2025-07-24 17:23:17 [INFO]: Entering updateOrder
+2025-07-24 17:23:17 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 17:23:17 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 17:23:17 [ERROR]: Error updating order:
+2025-07-24 17:23:21 [INFO]: PUT /api/orders/30
+2025-07-24 17:23:21 [INFO]: Entering updateOrder
+2025-07-24 17:23:22 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 17:23:22 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 17:23:22 [ERROR]: Error updating order:
+2025-07-24 17:23:31 [INFO]: GET /api/orders/30
+2025-07-24 17:23:31 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 17:23:50 [INFO]: Server running on port 5000
+2025-07-24 17:23:50 [INFO]: Database connected successfully
+2025-07-24 17:23:57 [INFO]: PUT /api/orders/30
+2025-07-24 17:23:57 [INFO]: Entering updateOrder
+2025-07-24 17:23:57 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 17:23:57 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 17:23:57 [ERROR]: Error updating order:
+2025-07-24 17:24:09 [INFO]: Server running on port 5000
+2025-07-24 17:24:09 [INFO]: Database connected successfully
+2025-07-24 17:24:13 [INFO]: Server running on port 5000
+2025-07-24 17:24:13 [INFO]: Database connected successfully
+2025-07-24 17:24:17 [INFO]: PUT /api/orders/30
+2025-07-24 17:24:17 [INFO]: Entering updateOrder
+2025-07-24 17:24:17 [ERROR]: Database error fetching order: Order hash required for public access
+2025-07-24 17:24:17 [ERROR]: Database error updating order: Order hash required for public access
+2025-07-24 17:24:17 [ERROR]: Error updating order:
+2025-07-24 17:26:44 [INFO]: Server running on port 5000
+2025-07-24 17:26:44 [INFO]: Database connected successfully
+2025-07-24 17:27:25 [INFO]: Server running on port 5000
+2025-07-24 17:27:25 [INFO]: Database connected successfully
+2025-07-24 17:27:31 [INFO]: PUT /api/orders/30
+2025-07-24 17:27:31 [INFO]: Entering updateOrder
+2025-07-24 17:30:08 [ERROR]: Error: Expected ',' or '}' after property value in JSON at position 350 (line 11 column 4), Stack: SyntaxError: Expected ',' or '}' after property value in JSON at position 350 (line 11 column 4)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\body-parser\lib\types\json.js:77:19)
+    at C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\body-parser\lib\read.js:123:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\kasim\OneDrive\Desktop\Evangadi\Phase-5\Abebe Garage\abe-garage\server\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:518:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-07-24 17:30:29 [INFO]: POST /api/orders
+2025-07-24 17:30:29 [INFO]: Entering createOrder
+2025-07-24 17:30:29 [ERROR]: Database error creating order: Invalid customer_id
+2025-07-24 17:30:29 [ERROR]: Error creating order:
+2025-07-24 17:30:37 [INFO]: POST /api/orders
+2025-07-24 17:30:37 [INFO]: Entering createOrder
+2025-07-24 17:30:55 [INFO]: GET /api/orders
+2025-07-24 17:30:55 [INFO]: Entering getAllOrders
+2025-07-24 17:31:13 [INFO]: DELETE /api/orders/5
+2025-07-24 17:31:13 [INFO]: Entering deleteOrder
+2025-07-24 17:31:24 [INFO]: GET /api/orders
+2025-07-24 17:31:24 [INFO]: Entering getAllOrders
+2025-07-24 17:31:36 [INFO]: GET /api/orders/5
+2025-07-24 17:31:36 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 17:31:44 [INFO]: GET /api/orders/30
+2025-07-24 17:31:44 [INFO]: Entering getOrderByIdOrHash
+2025-07-24 17:32:26 [INFO]: PUT /api/orders/30
+2025-07-24 17:32:26 [INFO]: Entering updateOrder

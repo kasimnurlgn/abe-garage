@@ -5,7 +5,7 @@ const authMiddleware = require("../middlewares/auth.middleware");
 
 // Middleware to check for Admin or Manager role
 const restrictToAdminOrManager = (req, res, next) => {
-  const userRole = req.user.role; // Assumes authMiddleware attaches role to req.user
+  const userRole = req.user ? req.user.role : null;
   if (userRole === "Admin" || userRole === "Manager") {
     next();
   } else {
@@ -18,11 +18,14 @@ const restrictToAdminOrManager = (req, res, next) => {
 // GET /api/orders - Retrieve all orders (authenticated, any employee)
 router.get("/", authMiddleware, orderController.getAllOrders);
 
-// POST /api/order - Create a new order (authenticated, any employee)
+// POST /api/orders - Create a new order (authenticated, any employee)
 router.post("/", authMiddleware, orderController.createOrder);
 
-// GET /api/order/:id - Retrieve order by ID or hash (authenticated or public with order_hash)
-router.get("/:id", orderController.getOrderByIdOrHash);
+// GET /api/orders/:id - Retrieve order by ID (authenticated only)
+router.get("/:id", authMiddleware, orderController.getOrderByIdOrHash);
+
+// GET /api/orders/hash/:order_hash - Retrieve order by hash (public access)
+router.get("/hash/:order_hash", orderController.getOrderByIdOrHash);
 
 // PUT /api/orders/:id - Update order details (authenticated, Admin/Manager only)
 router.put(

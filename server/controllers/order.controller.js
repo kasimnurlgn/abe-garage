@@ -1,10 +1,10 @@
 const orderService = require("../services/order.service");
-const { generateHash } = require("../utils/hash");
 const logger = require("../utils/logger");
+const crypto = require("crypto");
 
 const orderController = {
-  // Get all orders
   async getAllOrders(req, res) {
+    logger.info("Entering getAllOrders");
     try {
       const orders = await orderService.getAllOrders();
       res.status(200).json(orders);
@@ -14,46 +14,68 @@ const orderController = {
     }
   },
 
-  // Create a new order
   async createOrder(req, res) {
+    logger.info("Entering createOrder", { body: req.body });
     try {
-      const { customer_id, vehicle_id, services } = req.body; // services: [{ service_id, quantity }]
+      const {
+        customer_id,
+        employee_id,
+        order_hash: provided_order_hash,
+        order_total_price,
+        order_estimated_completion_date,
+        order_additional_requests,
+        services,
+      } = req.body;
       if (
         !customer_id ||
-        !vehicle_id ||
+        !employee_id ||
+        !order_estimated_completion_date ||
         !services ||
         !Array.isArray(services) ||
-        services.length === 0
+        services.length === 0 ||
+        services.some((s) => !s.service_id)
       ) {
         return res
           .status(400)
           .json({ error: "Missing or invalid required fields" });
       }
-      const order_number = `ORD-${Date.now()}`;
-      const order_hash = await generateHash(
-        `${customer_id}${vehicle_id}${order_number}`
-      );
+      // Generate unique order_hash
+      const order_hash =
+        provided_order_hash || crypto.randomBytes(16).toString("hex");
       const orderData = {
         customer_id,
-        vehicle_id,
-        order_number,
+        employee_id,
         order_hash,
+        order_total_price,
+        order_estimated_completion_date,
+        order_additional_requests,
         services,
       };
       const newOrder = await orderService.createOrder(orderData);
       res.status(201).json(newOrder);
     } catch (err) {
       logger.error("Error creating order:", err.message);
-      res.status(500).json({ error: "Failed to create order" });
+      if (
+        err.message.includes("Duplicate entry") &&
+        err.message.includes("order_hash")
+      ) {
+        return res.status(400).json({
+          error:
+            "Order hash already exists, please provide a unique order_hash",
+        });
+      }
+      res.status(500).json({ error: err.message || "Failed to create order" });
     }
   },
 
-  // Get order by ID or hash
   async getOrderByIdOrHash(req, res) {
+    logger.info("Entering getOrderByIdOrHash", {
+      params: req.params,
+      isAuthenticated: !!req.user,
+    });
     try {
-      const { id } = req.params;
-      const order_hash = req.query.order_hash; // Optional query param for public access
-      const isAuthenticated = req.user; // Check if JWT is provided via authMiddleware
+      const { id, order_hash } = req.params;
+      const isAuthenticated = !!req.user;
 
       const order = await orderService.getOrderByIdOrHash(
         id,
@@ -70,12 +92,24 @@ const orderController = {
     }
   },
 
-  // Update order
   async updateOrder(req, res) {
+    logger.info("Entering updateOrder", { params: req.params });
     try {
       const { id } = req.params;
-      const { order_status, order_total, services } = req.body; // services: [{ service_id, quantity }]
-      const orderData = { order_status, order_total, services };
+      const {
+        order_status,
+        order_total_price,
+        order_estimated_completion_date,
+        order_additional_requests,
+        services,
+      } = req.body;
+      const orderData = {
+        order_status,
+        order_total_price,
+        order_estimated_completion_date,
+        order_additional_requests,
+        services,
+      };
       const updatedOrder = await orderService.updateOrder(id, orderData);
       if (!updatedOrder) {
         return res.status(404).json({ error: "Order not found" });
@@ -87,8 +121,8 @@ const orderController = {
     }
   },
 
-  // Delete order
   async deleteOrder(req, res) {
+    logger.info("Entering deleteOrder", { params: req.params });
     try {
       const { id } = req.params;
       const deleted = await orderService.deleteOrder(id);

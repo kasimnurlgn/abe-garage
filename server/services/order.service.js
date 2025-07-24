@@ -5,7 +5,7 @@ const orderService = {
   async getAllOrders() {
     try {
       const [rows] = await db.query(`
-        SELECT o.order_id, o.order_number, o.order_hash, o.order_date, o.order_status,
+        SELECT o.order_id, o.order_hash, o.order_date, o.order_status,
                oi.order_total_price, oi.order_estimated_completion_date, oi.order_additional_requests,
                c.customer_email, e.employee_email,
                v.vehicle_serial_number, v.vehicle_make, v.vehicle_model,
@@ -25,7 +25,6 @@ const orderService = {
         if (!order) {
           acc.push({
             order_id: row.order_id,
-            order_number: row.order_number,
             order_hash: row.order_hash,
             order_date: row.order_date,
             order_status: row.order_status,
@@ -70,7 +69,6 @@ const orderService = {
   async createOrder({
     customer_id,
     employee_id,
-    order_number,
     order_hash,
     order_total_price,
     order_estimated_completion_date,
@@ -113,8 +111,8 @@ const orderService = {
 
       // Insert order
       const [orderResult] = await connection.query(
-        "INSERT INTO orders (customer_id, employee_id, order_number, order_date, order_hash, order_status) VALUES (?, ?, ?, NOW(), ?, ?)",
-        [customer_id, employee_id, order_number, order_hash, "pending"]
+        "INSERT INTO orders (customer_id, employee_id, order_date, order_hash, order_status) VALUES (?, ?, NOW(), ?, ?)",
+        [customer_id, employee_id, order_hash, "pending"]
       );
       const orderId = orderResult.insertId;
 
@@ -138,7 +136,7 @@ const orderService = {
       }
 
       await connection.commit();
-      return await this.getOrderByIdOrHash(orderId);
+      return await this.getOrderByIdOrHash(orderId, null, true);
     } catch (err) {
       await connection.rollback();
       logger.error("Database error creating order:", err);
@@ -151,7 +149,7 @@ const orderService = {
   async getOrderByIdOrHash(id, order_hash, isAuthenticated) {
     try {
       let query = `
-        SELECT o.order_id, o.order_number, o.order_hash, o.order_date, o.order_status,
+        SELECT o.order_id, o.order_hash, o.order_date, o.order_status,
                oi.order_total_price, oi.order_estimated_completion_date, oi.order_additional_requests,
                c.customer_email, e.employee_email,
                v.vehicle_serial_number, v.vehicle_make, v.vehicle_model,
@@ -183,7 +181,6 @@ const orderService = {
 
       const order = {
         order_id: rows[0].order_id,
-        order_number: rows[0].order_number,
         order_hash: rows[0].order_hash,
         order_date: rows[0].order_date,
         order_status: rows[0].order_status,
@@ -272,7 +269,7 @@ const orderService = {
       }
 
       await connection.commit();
-      return await this.getOrderByIdOrHash(id);
+      return await this.getOrderByIdOrHash(id, null, true);
     } catch (err) {
       await connection.rollback();
       logger.error("Database error updating order:", err);
