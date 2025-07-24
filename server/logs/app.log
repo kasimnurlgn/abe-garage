@@ -839,3 +839,17 @@
 2025-07-24 17:31:44 [INFO]: Entering getOrderByIdOrHash
 2025-07-24 17:32:26 [INFO]: PUT /api/orders/30
 2025-07-24 17:32:26 [INFO]: Entering updateOrder
+2025-07-24 17:38:29 [INFO]: GET /api/services
+2025-07-24 17:38:29 [ERROR]: Database error fetching services: Unknown column 'service_price' in 'field list'
+2025-07-24 17:38:29 [ERROR]: Error fetching services:
+2025-07-24 17:41:17 [INFO]: POST /api/services
+2025-07-24 17:41:17 [ERROR]: Database error creating service: Unknown column 'service_price' in 'field list'
+2025-07-24 17:41:17 [ERROR]: Error creating service:
+2025-07-24 17:47:53 [INFO]: GET /api/services
+2025-07-24 17:47:53 [ERROR]: Database error fetching services: Unknown column 'service_price' in 'field list'
+2025-07-24 17:47:53 [ERROR]: Error fetching services:
+2025-07-24 17:48:12 [INFO]: GET /api/services
+2025-07-24 17:48:12 [ERROR]: Database error fetching services: Unknown column 'service_price' in 'field list'
+2025-07-24 17:48:12 [ERROR]: Error fetching services:
+2025-07-24 17:51:35 [INFO]: GET /api/services
+2025-07-24 17:55:21 [INFO]: POST /api/services

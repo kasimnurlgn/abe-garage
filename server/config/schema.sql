@@ -92,6 +92,7 @@ CREATE TABLE IF NOT EXISTS `customer_vehicle_info` (
 CREATE TABLE IF NOT EXISTS `common_services` (
   `service_id` INT NOT NULL AUTO_INCREMENT,
   `service_name` VARCHAR(255) NOT NULL,
+   `service_price` DECIMAL(10,2) NOT NULL DEFAULT 0,
   `service_description` VARCHAR(255) NOT NULL,
   `service_active_status` INT NOT NULL DEFAULT 1,
   PRIMARY KEY (`service_id`)
