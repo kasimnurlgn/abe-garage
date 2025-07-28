@@ -1,5 +1,4 @@
 import React from "react";
-// import css from "Header.module.css";
 import logo from "../../assets/images/custom/logo.png";
 import iconBar from "../../assets/images/icons/icon-bar.png";
 import logoTwo from "../../assets/images/logo-two.png";
