@@ -23,19 +23,17 @@ function About() {
                 <h2>We have 24 years experience</h2>
                 <div className="text">
                   <p>
-                    Bring to the table win-win survival strategies to ensure
-                    proactive domination. At the end of the day, going forward,
-                    a new normal that has evolved from generation X is on the
-                    runway heading towards a streamlined cloud solution. User
-                    generated content in real-time will have multiple
-                    touchpoints for offshoring.
+                    At AbeGarage, we're dedicated to transforming the way
+                    garages operate by combining reliable service with smart
+                    technology. Our goal is to make garage management simple,
+                    efficient, and customer-friendly.
                   </p>
                   <p>
-                    Capitalize on low hanging fruit to identify a ballpark value
-                    added activity to beta test. Override the digital divide
-                    with additional clickthroughs from DevOps. Nanotechnology
-                    immersion along the information highway will close the loop
-                    on focusing.
+                    From real-time job tracking to easy customer communication,
+                    we offer the tools garages need to grow and deliver better
+                    results. Whether you're managing inventory, scheduling
+                    repairs, or keeping clients informed, AbeGarage brings
+                    everything together in one streamlined solution.
                   </p>
                 </div>
                 <div className="link-btn mt-40">
