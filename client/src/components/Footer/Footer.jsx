@@ -3,19 +3,19 @@ import logoTwo from "../../assets/images/logo-two.png";
 function Footer() {
   return (
     <>
-      <footer class="main-footer">
+      <footer className="main-footer">
         {/* <!--Upper Box--> */}
-        <div class="upper-box">
-          <div class="auto-container">
-            <div class="row no-gutters">
+        <div className="upper-box">
+          <div className="auto-container">
+            <div className="row no-gutters">
               {/* <!--Footer Info Box--> */}
-              <div class="footer-info-box col-md-4 col-sm-6 col-xs-12">
-                <div class="info-inner">
-                  <div class="content">
-                    <div class="icon">
-                      <span class="flaticon-pin"></span>
+              <div className="footer-info-box col-md-4 col-sm-6 col-xs-12">
+                <div className="info-inner">
+                  <div className="content">
+                    <div className="icon">
+                      <span className="flaticon-pin"></span>
                     </div>
-                    <div class="text">
+                    <div className="text">
                       54B, Tailstoi Town 5238 MT, <br /> La city, IA 522364
                     </div>
                   </div>
@@ -23,13 +23,13 @@ function Footer() {
               </div>
 
               {/* <!--Footer Info Box--> */}
-              <div class="footer-info-box col-md-4 col-sm-6 col-xs-12">
-                <div class="info-inner">
-                  <div class="content">
-                    <div class="icon">
-                      <span class="flaticon-email"></span>
+              <div className="footer-info-box col-md-4 col-sm-6 col-xs-12">
+                <div className="info-inner">
+                  <div className="content">
+                    <div className="icon">
+                      <span className="flaticon-email"></span>
                     </div>
-                    <div class="text">
+                    <div className="text">
                       Email us : <br />{" "}
                       <a href="mailto:contact.contact@autorex.com">
                         contact@abegarge.com
@@ -40,13 +40,13 @@ function Footer() {
               </div>
 
               {/* <!--Footer Info Box--> */}
-              <div class="footer-info-box col-md-4 col-sm-6 col-xs-12">
-                <div class="info-inner">
-                  <div class="content">
-                    <div class="icon">
-                      <span class="flaticon-phone"></span>
+              <div className="footer-info-box col-md-4 col-sm-6 col-xs-12">
+                <div className="info-inner">
+                  <div className="content">
+                    <div className="icon">
+                      <span className="flaticon-phone"></span>
                     </div>
-                    <div class="text">
+                    <div className="text">
                       Call us on : <br />
                       <strong>+ 1800 456 7890</strong>
                     </div>
@@ -58,19 +58,19 @@ function Footer() {
         </div>
 
         {/* <!--Widgets Section--> */}
-        <div class="widgets-section">
-          <div class="auto-container">
-            <div class="widgets-inner-container">
-              <div class="row clearfix">
+        <div className="widgets-section">
+          <div className="auto-container">
+            <div className="widgets-inner-container">
+              <div className="row clearfix">
                 {/* <!--Footer Column--> */}
-                <div class="footer-column col-lg-4">
-                  <div class="widget widget_about">
-                    <div class="logo">
+                <div className="footer-column col-lg-4">
+                  <div className="widget widget_about">
+                    <div className="logo">
                       <a href="index.html">
                         <img src={logoTwo} alt="Logo Two" />
                       </a>
                     </div>
-                    <div class="text">
+                    <div className="text">
                       A modern garage management system that helps you run your
                       workshop efficiently. From booking services to tracking
                       repairs and managing inventory, everything is available in
@@ -80,13 +80,13 @@ function Footer() {
                 </div>
 
                 {/* <!--Footer Column--> */}
-                <div class="footer-column col-lg-4">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="widget widget_links">
-                        <h4 class="widget_title">Usefull Links</h4>
-                        <div class="widget-content">
-                          <ul class="list">
+                <div className="footer-column col-lg-4">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="widget widget_links">
+                        <h4 className="widget_title">Usefull Links</h4>
+                        <div className="widget-content">
+                          <ul className="list">
                             <li>
                               <a href="index.html">Home</a>
                             </li>
@@ -106,11 +106,11 @@ function Footer() {
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="widget widget_links">
-                        <h4 class="widget_title">Our Services</h4>
-                        <div class="widget-content">
-                          <ul class="list">
+                    <div className="col-md-6">
+                      <div className="widget widget_links">
+                        <h4 className="widget_title">Our Services</h4>
+                        <div className="widget-content">
+                          <ul className="list">
                             <li>
                               <a href="#">Performance Upgrade</a>
                             </li>
@@ -134,47 +134,47 @@ function Footer() {
                 </div>
 
                 {/* <!--Footer Column--> */}
-                <div class="footer-column col-lg-4">
-                  <div class="widget widget_newsletter">
-                    <h4 class="widget_title">Newsletter</h4>
-                    <div class="text">Get latest updates and offers.</div>
-                    <div class="newsletter-form">
-                      <form class="ajax-sub-form" method="post">
-                        <div class="form-group">
+                <div className="footer-column col-lg-4">
+                  <div className="widget widget_newsletter">
+                    <h4 className="widget_title">Newsletter</h4>
+                    <div className="text">Get latest updates and offers.</div>
+                    <div className="newsletter-form">
+                      <form className="ajax-sub-form" method="post">
+                        <div className="form-group">
                           <input
                             type="email"
                             placeholder="Enter your email"
                             id="subscription-email"
                           />
-                          <button class="theme-btn" type="submit">
-                            <span class="fas fa-paper-plane"></span>
+                          <button className="theme-btn" type="submit">
+                            <span className="fas fa-paper-plane"></span>
                           </button>
                           <label
-                            class="subscription-label"
+                            className="subscription-label"
                             for="subscription-email"
                           ></label>
                         </div>
                       </form>
                     </div>
-                    <ul class="social-links">
+                    <ul className="social-links">
                       <li>
                         <a href="#">
-                          <span class="fab fa-facebook-f"></span>
+                          <span className="fab fa-facebook-f"></span>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <span class="fab fa-linkedin-in"></span>
+                          <span className="fab fa-linkedin-in"></span>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <span class="fab fa-twitter"></span>
+                          <span className="fab fa-twitter"></span>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <span class="fab fa-google-plus-g"></span>
+                          <span className="fab fa-google-plus-g"></span>
                         </a>
                       </li>
                     </ul>
@@ -186,12 +186,12 @@ function Footer() {
         </div>
 
         {/* <!--Footer Bottom--> */}
-        <div class="auto-container">
-          <div class="footer-bottom">
-            <div class="copyright-text">
+        <div className="auto-container">
+          <div className="footer-bottom">
+            <div className="copyright-text">
               © 2025 <a href="#">Kasim Nurlgn</a> | All rights reserved.
             </div>
-            <div class="text">
+            <div className="text">
               Created by <a href="#">ThemeArc</a>
             </div>
           </div>

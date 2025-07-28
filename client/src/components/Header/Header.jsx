@@ -6,17 +6,17 @@ import logoTwo from "../../assets/images/logo-two.png";
 function Header() {
   return (
     <>
-      <header class="main-header header-style-one">
+      <header className="main-header header-style-one">
         {/* <!-- Header Top --> */}
-        <div class="header-top">
-          <div class="auto-container">
-            <div class="inner-container">
-              <div class="left-column">
-                <div class="text">Enjoy the Beso while we fix your car</div>
-                <div class="office-hour">Monday - Saturday 7:00AM - 6:00PM</div>
+        <div className="header-top">
+          <div className="auto-container">
+            <div className="inner-container">
+              <div className="left-column">
+                <div className="text">Enjoy the Beso while we fix your car</div>
+                <div className="office-hour">Monday - Saturday 7:00AM - 6:00PM</div>
               </div>
-              <div class="right-column">
-                <div class="phone-number">
+              <div className="right-column">
+                <div className="phone-number">
                   Schedule Your Appontment Today :{" "}
                   <strong>1800 456 7890</strong>
                 </div>
@@ -26,39 +26,39 @@ function Header() {
         </div>
 
         {/* <!-- Header Upper --> */}
-        <div class="header-upper">
-          <div class="auto-container">
-            <div class="inner-container">
+        <div className="header-upper">
+          <div className="auto-container">
+            <div className="inner-container">
               {/* <!--Logo--> */}
-              <div class="logo-box">
-                <div class="logo">
+              <div className="logo-box">
+                <div className="logo">
                   <a href="/">
                     <img src={logo} alt="logo" />
                   </a>
                 </div>
               </div>
-              <div class="right-column">
+              <div className="right-column">
                 {/* <!--Nav Box--> */}
-                <div class="nav-outer">
+                <div className="nav-outer">
                   {/* <!--Mobile Navigation Toggler--> */}
-                  <div class="mobile-nav-toggler">
+                  <div className="mobile-nav-toggler">
                     <img src={iconBar} alt="Icon Bar" />
                   </div>
 
                   {/* <!-- Main Menu --> */}
-                  <nav class="main-menu navbar-expand-md navbar-light">
+                  <nav className="main-menu navbar-expand-md navbar-light">
                     <div
-                      class="collapse navbar-collapse show clearfix"
+                      className="collapse navbar-collapse show clearfix"
                       id="navbarSupportedContent"
                     >
-                      <ul class="navigation">
-                        <li class="dropdown">
+                      <ul className="navigation">
+                        <li className="dropdown">
                           <a href="/">Home</a>
                         </li>
-                        <li class="dropdown">
+                        <li className="dropdown">
                           <a href="/about">About Us</a>
                         </li>
-                        <li class="dropdown">
+                        <li className="dropdown">
                           <a href="/services">Services</a>
                         </li>
                         <li>
@@ -68,9 +68,9 @@ function Header() {
                     </div>
                   </nav>
                 </div>
-                <div class="search-btn"></div>
-                <div class="link-btn">
-                  <a href="/login" class="theme-btn btn-style-one">
+                <div className="search-btn"></div>
+                <div className="link-btn">
+                  <a href="/login" className="theme-btn btn-style-one">
                     Login
                   </a>
                 </div>
@@ -81,33 +81,33 @@ function Header() {
         {/* <!--End Header Upper--> */}
 
         {/* <!-- Sticky Header  --> */}
-        <div class="sticky-header">
+        <div className="sticky-header">
           {/* <!-- Header Upper --> */}
-          <div class="header-upper">
-            <div class="auto-container">
-              <div class="inner-container">
+          <div className="header-upper">
+            <div className="auto-container">
+              <div className="inner-container">
                 {/* <!--Logo--> */}
-                <div class="logo-box">
-                  <div class="logo">
+                <div className="logo-box">
+                  <div className="logo">
                     <a href="/">
                       <img src={logo} alt="Logo" />
                     </a>
                   </div>
                 </div>
-                <div class="right-column">
+                <div className="right-column">
                   {/* <!--Nav Box--> */}
-                  <div class="nav-outer">
+                  <div className="nav-outer">
                     {/* <!--Mobile Navigation Toggler--> */}
-                    <div class="mobile-nav-toggler">
+                    <div className="mobile-nav-toggler">
                       <img src={iconBar} alt="Icon Bar" />
                     </div>
 
                     {/* <!-- Main Menu --> */}
-                    <nav class="main-menu navbar-expand-md navbar-light"></nav>
+                    <nav className="main-menu navbar-expand-md navbar-light"></nav>
                   </div>
-                  <div class="search-btn"></div>
-                  <div class="link-btn">
-                    <a href="/login" class="theme-btn btn-style-one">
+                  <div className="search-btn"></div>
+                  <div className="link-btn">
+                    <a href="/login" className="theme-btn btn-style-one">
                       Login
                     </a>
                   </div>
@@ -120,28 +120,28 @@ function Header() {
         {/* <!-- End Sticky Menu --> */}
 
         {/* <!-- Mobile Menu  --> */}
-        <div class="mobile-menu">
-          <div class="menu-backdrop"></div>
-          <div class="close-btn">
-            <span class="icon flaticon-remove"></span>
+        <div className="mobile-menu">
+          <div className="menu-backdrop"></div>
+          <div className="close-btn">
+            <span className="icon flaticon-remove"></span>
           </div>
 
-          <nav class="menu-box">
-            <div class="nav-logo">
+          <nav className="menu-box">
+            <div className="nav-logo">
               <a href="index.html">
                 <img src={logoTwo} alt="" />
               </a>
             </div>
-            <div class="menu-outer">
+            <div className="menu-outer">
               {/* <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--> */}
             </div>
           </nav>
         </div>
         {/* <!-- End Mobile Menu --> */}
 
-        <div class="nav-overlay">
-          <div class="cursor"></div>
-          <div class="cursor-follower"></div>
+        <div className="nav-overlay">
+          <div className="cursor"></div>
+          <div className="cursor-follower"></div>
         </div>
       </header>
     </>
