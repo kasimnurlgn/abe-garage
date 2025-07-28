@@ -32,7 +32,7 @@ function Footer() {
                     <div class="text">
                       Email us : <br />{" "}
                       <a href="mailto:contact.contact@autorex.com">
-                        contact@autorex.com
+                        contact@abegarge.com
                       </a>
                     </div>
                   </div>
@@ -71,9 +71,10 @@ function Footer() {
                       </a>
                     </div>
                     <div class="text">
-                      Capitalize on low hanging fruit to identify a ballpark
-                      value added activity to beta test. Override the digital
-                      divide additional clickthroughs.
+                      A modern garage management system that helps you run your
+                      workshop efficiently. From booking services to tracking
+                      repairs and managing inventory, everything is available in
+                      one easy-to-use platform.
                     </div>
                   </div>
                 </div>
