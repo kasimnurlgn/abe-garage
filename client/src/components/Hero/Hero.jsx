@@ -17,7 +17,7 @@ function Hero() {
           <div className="video-box">
             <div className="video-btn">
               <a
-                href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s"
+                href="https://www.youtube.com/watch?v=PUkAIAIzA0I"
                 className="overlay-link lightbox-image video-fancybox ripple"
               >
                 <i className="flaticon-play"></i>
