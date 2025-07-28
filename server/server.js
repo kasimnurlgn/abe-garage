@@ -17,12 +17,12 @@ const indexRoutes = require("./routes/index");
 
 const app = express();
 
-// Security middleware
-app.use(helmet()); // Set secure HTTP headers
-app.use(compression()); // Compress responses
+// My Security middlewares
+app.use(helmet());
+app.use(compression()); 
 app.use(cors());
-app.use(express.json()); // Parse JSON bodies
-app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true })); 
 
 // Rate limiting for public routes
 const limiter = rateLimit({
@@ -30,7 +30,7 @@ const limiter = rateLimit({
   max: 100, // Limit to 100 requests per window
   message: "Too many requests from this IP, please try again later.",
 });
-app.use("/api/login", limiter); // Apply rate limiting to login route
+app.use("/api/login", limiter); 
 
 // Request logging
 app.use((req, res, next) => {
@@ -39,7 +39,7 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use("/api", indexRoutes); // Aggregate all routes under /api
+app.use("/api", indexRoutes); 
 
 // Health check endpoint
 app.get("/health", async (req, res) => {
@@ -52,7 +52,7 @@ app.get("/health", async (req, res) => {
   }
 });
 
-// Handle unmatched routes
+// Handle unmatched routes, I call it 404 handler
 app.use((req, res) => {
   res.status(404).json({ error: "Route not found" });
 });

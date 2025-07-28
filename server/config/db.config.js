@@ -14,8 +14,3 @@ const pool = mysql.createPool({
 
 module.exports = pool;
 
-/* 
-git add .
-git commit -m "service service added"
-git push
-*/

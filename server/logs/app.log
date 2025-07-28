@@ -853,3 +853,16 @@
 2025-07-24 17:48:12 [ERROR]: Error fetching services:
 2025-07-24 17:51:35 [INFO]: GET /api/services
 2025-07-24 17:55:21 [INFO]: POST /api/services
+2025-07-24 17:57:09 [INFO]: GET /api/services/4
+2025-07-24 17:57:09 [ERROR]: Invalid token:
+2025-07-24 17:57:42 [INFO]: POST /api/login
+2025-07-24 17:57:56 [INFO]: POST /api/login
+2025-07-24 17:58:29 [INFO]: GET /api/services/4
+2025-07-24 17:59:02 [INFO]: PUT /api/services/4
+2025-07-24 17:59:14 [INFO]: PUT /api/services/4
+2025-07-24 17:59:22 [INFO]: DELETE /api/services/4
+2025-07-24 17:59:31 [INFO]: GET /api/services
+2025-07-24 18:03:06 [INFO]: Server running on port 5000
+2025-07-24 18:03:07 [INFO]: Database connected successfully
+2025-07-24 18:04:09 [INFO]: Server running on port 5000
+2025-07-24 18:04:09 [INFO]: Database connected successfully

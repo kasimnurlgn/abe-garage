@@ -12,7 +12,7 @@ const vehicleRoutes = require("./vehicles.routes");
 const installRoutes = require("./install.routes");
 
 // Mount routes
-router.use("/login", loginRoutes); // Unprotected for authentication
+router.use("/login", loginRoutes); 
 router.use("/employees", authMiddleware, employeeRoutes);
 router.use("/customers", authMiddleware, customerRoutes);
 router.use("/orders", authMiddleware, orderRoutes);
