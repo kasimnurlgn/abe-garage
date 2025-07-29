@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/custom/logo.png";
 import iconBar from "../../assets/images/icons/icon-bar.png";
@@ -10,6 +10,19 @@ const Header = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  useEffect(() => {
+    if (window.$ && typeof window.$ === "function") {
+      window.$(".mobile-nav-toggler").on("click", function () {
+        window.$("body").addClass("mobile-menu-visible");
+      });
+
+      window
+        .$(".mobile-menu .menu-backdrop, .mobile-menu .close-btn")
+        .on("click", function () {
+          window.$("body").removeClass("mobile-menu-visible");
+        });
+    }
+  }, []);
 
   return (
     <header className="main-header header-style-one">
