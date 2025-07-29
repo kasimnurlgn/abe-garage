@@ -1,28 +1,28 @@
 import React from "react";
-import image3 from "../../assets/images/resource/image-3.jpg";
+import feature from "../../assets/images/resource/feature.png";
 function Features() {
   return (
-    <section class="features-section">
-      <div class="auto-container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="inner-container">
+    <section className="features-section">
+      <div className="auto-container">
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="inner-container">
               <h2>
                 Quality Service And <br /> Customer Satisfaction !!
               </h2>
-              <div class="text">
+              <div className="text">
                 We utilize the most recent symptomatic gear to ensure your
                 vehicle is fixed or adjusted appropriately and in an opportune
                 manner. We are an individual from Professional Auto Service, a
-                first class execution arrange, where free assistance offices
-                share shared objectives of being world-class car administration
+                first className execution arrange, where free assistance offices
+                share shared objectives of being world-className car administration
                 focuses.
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="image">
-              <img src={image3} alt=" Image 3" />
+          <div className="col-lg-6">
+            <div className="image">
+              <img src={feature} alt="" />
             </div>
           </div>
         </div>
