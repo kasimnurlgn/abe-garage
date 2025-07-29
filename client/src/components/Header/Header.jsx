@@ -193,6 +193,11 @@ const Header = () => {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link to="/login" onClick={toggleMobileMenu}>
+                  Login
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
