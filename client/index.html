@@ -21,11 +21,6 @@
       href="./src/assets/images/favicon.png"
       type="image/x-icon"
     />
-    <link
-      rel="icon"
-      href="./src/assets/images/favicon.png"
-      type="image/x-icon"
-    />
 
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -33,9 +28,50 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
+    <!-- IE9 Compatibility -->
+    <!--[if lt IE 9
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
+    ><![endif]-->
+    <!--[if lt IE 9
+      ]><script src="./src/assets/js/respond.js"></script
+    ><![endif]-->
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Optional: Preloader from template -->
+    <div class="page-wrapper">
+      <div class="loader-wrap">
+        <div class="preloader">
+          <div class="preloader-close">Preloader Close</div>
+        </div>
+        <div class="layer layer-one"><span class="overlay"></span></div>
+        <div class="layer layer-two"><span class="overlay"></span></div>
+        <div class="layer layer-three"><span class="overlay"></span></div>
+      </div>
+
+      <!-- React App Mount Point -->
+      <div id="root"></div>
+    </div>
+
+    <!-- JavaScript Dependencies from Template -->
+    <script src="./src/assets/js/jquery.js"></script>
+    <script src="./src/assets/js/popper.min.js"></script>
+    <script src="./src/assets/js/bootstrap.min.js"></script>
+    <script src="./src/assets/js/bootstrap-select.min.js"></script>
+    <script src="./src/assets/js/jquery.fancybox.js"></script>
+    <script src="./src/assets/js/isotope.js"></script>
+    <script src="./src/assets/js/owl.js"></script>
+    <script src="./src/assets/js/appear.js"></script>
+    <script src="./src/assets/js/wow.js"></script>
+    <script src="./src/assets/js/lazyload.js"></script>
+    <script src="./src/assets/js/scrollbar.js"></script>
+    <script src="./src/assets/js/TweenMax.min.js"></script>
+    <script src="./src/assets/js/swiper.min.js"></script>
+    <script src="./src/assets/js/jquery.polyglot.language.switcher.js"></script>
+    <script src="./src/assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./src/assets/js/parallax-scroll.js"></script>
+    <script src="./src/assets/js/script.js"></script>
+
+    <!-- Vite Entry Point -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
