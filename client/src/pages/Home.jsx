@@ -5,6 +5,7 @@ import Hero from "../components/Hero/Hero";
 import About from "../components/About/About";
 import Services from "../components/Services/Services";
 import Features from "../components/Features/Features";
+import WhyUs from "../components/WhyUs/WhyUs";
 function Home() {
   return (
     <>
@@ -13,6 +14,7 @@ function Home() {
       <About />
       <Services />
       <Features />
+      <WhyUs />
       <Footer />
     </>
   );
