@@ -1,7 +1,7 @@
 import React from "react";
 import vban1 from "../../assets/images/custom/misc/vban1.jpg";
 import vban2 from "../../assets/images/custom/misc/vban2.jpg";
-function About() {
+function AboutBottom() {
   return (
     <>
       <section className="about-section">
@@ -55,4 +55,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutBottom;
