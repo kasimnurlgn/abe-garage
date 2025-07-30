@@ -1,12 +1,12 @@
 import React from "react";
-// import bg1 from "../../assets/images/resource/bg-1.jpg";
+import mybg from "../../assets/images/gallery/mybg.avif";
 function Since() {
   return (
     <section class="video-section">
       <div
         data-parallax='{"y": 50}'
         class="sec-bg"
-        // style={{ backgroundImage: `url(${bg1})` }}
+        style={{ backgroundImage: `url(${mybg})` }}
       ></div>
       <div class="auto-container">
         <h5>Working since 1992</h5>
