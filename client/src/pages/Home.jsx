@@ -6,17 +6,18 @@ import About from "../components/About/About";
 import Services from "../components/Services/Services";
 import Features from "../components/Features/Features";
 import WhyUs from "../components/WhyUs/WhyUs";
+import Since from "../components/Since/Since";
+import Layout from "./Layout";
 function Home() {
   return (
-    <>
-      <Header />
+    <Layout>
       <Hero />
       <About />
       <Services />
       <Features />
       <WhyUs />
-      <Footer />
-    </>
+      {/* <Since /> */}
+    </Layout>
   );
 }
 
