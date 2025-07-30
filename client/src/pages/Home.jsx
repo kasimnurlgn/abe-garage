@@ -8,6 +8,7 @@ import Features from "../components/Features/Features";
 import WhyUs from "../components/WhyUs/WhyUs";
 import Since from "../components/Since/Since";
 import Layout from "./Layout";
+import Appointment from "../components/Appointment/Appointment";
 function Home() {
   return (
     <Layout>
@@ -17,6 +18,7 @@ function Home() {
       <Features />
       <WhyUs />
       <Since />
+      <Appointment />
     </Layout>
   );
 }
