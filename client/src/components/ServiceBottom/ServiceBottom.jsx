@@ -1,6 +1,6 @@
 import React from "react";
 
-function Services() {
+function ServiceBottom() {
   return (
     <section className="services-section">
       <div className="auto-container">
@@ -92,4 +92,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default ServiceBottom;
