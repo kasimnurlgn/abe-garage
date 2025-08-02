@@ -7,10 +7,10 @@ function ServiceBottom() {
         <div className="sec-title style-two">
           <h2>Our Featured Services</h2>
           <div className="text">
-            Bring to the table win-win survival strategies to ensure proactive
-            domination. At the end of the day, going forward, a new normal that
-            has evolved from generation X is on the runway heading towards a
-            streamlined cloud solution.{" "}
+            We offer a wide range of expert automotive services to keep your
+            vehicle running safely, efficiently, and smoothly. Whether it’s
+            routine maintenance or major repairs, our experienced team is here
+            to help you drive with confidence.
           </div>
         </div>
         <div className="row">

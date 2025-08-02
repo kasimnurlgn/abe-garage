@@ -9,9 +9,10 @@ function WhyUs() {
             <div className="sec-title style-two">
               <h2>Why Choose Us</h2>
               <div className="text">
-                Bring to the table win-win survival strategies to ensure
-                proactive domination. At the end of the day, going forward, a
-                new normal that has evolved from generation heading towards.
+                We’re committed to providing reliable, affordable, and
+                top-quality automotive services. With skilled technicians,
+                modern equipment, and a dedication to customer satisfaction, we
+                ensure your vehicle gets the care it deserves—every time.
               </div>
             </div>
             <div className="icon-box">
