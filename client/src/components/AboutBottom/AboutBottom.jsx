@@ -1,6 +1,7 @@
 import React from "react";
 import vban1 from "../../assets/images/custom/misc/vban1.jpg";
 import vban2 from "../../assets/images/custom/misc/vban2.jpg";
+import { Link } from "react-router-dom";
 function AboutBottom() {
   return (
     <>
@@ -37,14 +38,14 @@ function AboutBottom() {
                   </p>
                 </div>
                 <div className="link-btn mt-40">
-                  <a
-                    href="about.html"
+                  <Link
+                    to="/about"
                     className="theme-btn btn-style-one style-two"
                   >
                     <span>
                       About Us <i className="flaticon-right"></i>
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

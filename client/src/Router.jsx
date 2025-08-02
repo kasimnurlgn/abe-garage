@@ -3,12 +3,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Service from "./pages/Services/Services";
+import Contact from "./pages/Contact/Contact";
 function RouterApp() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Service />} />
+      <Route path="/contact" element={<Contact />} />
       {/* Add more routes as needed */}
     </Routes>
   );

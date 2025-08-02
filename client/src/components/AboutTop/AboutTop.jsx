@@ -1,6 +1,7 @@
 import React from "react";
 import bg from "../../assets/images/gallery/bg.png";
 import image8 from "../../assets/images/gallery/tyre.png";
+import { Link } from "react-router-dom";
 function AboutTop() {
   return (
     <>
@@ -9,7 +10,7 @@ function AboutTop() {
           <h2>About us</h2>
           <ul class="page-breadcrumb">
             <li>
-              <a href="index.html">home</a>
+              <Link to="/">home</Link>
             </li>
             <li>About us</li>
           </ul>
