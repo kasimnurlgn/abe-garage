@@ -39,9 +39,9 @@ function ContactUs() {
               <div className="inner-column sec-title">
                 <h2>Our Address</h2>
                 <div className="text">
-                  Completely synergize resource taxing relationships via premier
-                  niche markets. Professionally cultivate one-to-one customer
-                  service.
+                  Visit us at our convenient location where our expert team is
+                  ready to provide you with top-quality car care and
+                  personalized service you can trust.
                 </div>
                 <ul>
                   <li>
