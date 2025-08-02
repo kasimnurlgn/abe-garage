@@ -28,20 +28,20 @@ function AboutTop() {
                 </h2>
                 <div class="text">
                   <p>
-                    Bring to the table win-win survival strategies to ensure
-                    proactive domination. At the end of the day, going forward,
-                    a new normal that has evolved from generation X is on the
-                    runway heading towards a streamlined cloud solution. User
-                    generated content in real-time will have multiple
-                    touchpoints for offshoring.
+                    we provide expert car repair and maintenance services with
+                    honesty and reliability. From engine diagnostics to tire
+                    replacement, our skilled mechanics are here to get you back
+                    on the road quickly and safely.
                   </p>
                   <p>
-                    Capitalize on low hanging fruit to identify a ballpark value
-                    added activity to beta test. Override the digital divide
-                    with additional clickthroughs from DevOps. Nanotechnology
-                    immersion along the information heading towards a
-                    streamlined cloud solution. User generated content in
-                    real-time will have multiple.
+                    Our garage is built on a foundation of trust, experience,
+                    and modern technology. We provide a wide range of car repair
+                    services—from diagnostics and routine maintenance to complex
+                    engine work. Our certified mechanics are passionate about
+                    vehicles and committed to delivering high-quality service
+                    every time. Whether you're here for a quick check-up or a
+                    full repair, you can expect honest advice, timely updates,
+                    and outstanding results that keep your car running smoothly.
                   </p>
                 </div>
               </div>
