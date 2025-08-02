@@ -2,55 +2,55 @@ import React from "react";
 import why from "../../assets/images/gallery/why.png";
 function WhyUs() {
   return (
-    <section class="why-choose-us">
-      <div class="auto-container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="sec-title style-two">
+    <section className="why-choose-us">
+      <div className="auto-container">
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="sec-title style-two">
               <h2>Why Choose Us</h2>
-              <div class="text">
+              <div className="text">
                 Bring to the table win-win survival strategies to ensure
                 proactive domination. At the end of the day, going forward, a
                 new normal that has evolved from generation heading towards.
               </div>
             </div>
-            <div class="icon-box">
-              <div class="icon">
-                <span class="flaticon-mechanic"></span>
+            <div className="icon-box">
+              <div className="icon">
+                <span className="flaticon-mechanic"></span>
               </div>
               <h4>Certified Expert Mechanics</h4>
             </div>
-            <div class="icon-box">
-              <div class="icon">
-                <span class="flaticon-wrench"></span>
+            <div className="icon-box">
+              <div className="icon">
+                <span className="flaticon-wrench"></span>
               </div>
               <h4>Fast And Quality Service</h4>
             </div>
-            <div class="icon-box">
-              <div class="icon">
-                <span class="flaticon-price-tag-1"></span>
+            <div className="icon-box">
+              <div className="icon">
+                <span className="flaticon-price-tag-1"></span>
               </div>
               <h4>Best Prices in Town</h4>
             </div>
-            <div class="icon-box">
-              <div class="icon">
-                <span class="flaticon-trophy"></span>
+            <div className="icon-box">
+              <div className="icon">
+                <span className="flaticon-trophy"></span>
               </div>
               <h4>Awarded Workshop</h4>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="sec-title style-two">
+          <div className="col-lg-6">
+            <div className="sec-title style-two">
               <h2>Addtional Services</h2>
             </div>
-            <div class="row">
-              <div class="col-md-5">
-                <div class="image">
+            <div className="row">
+              <div className="col-md-5">
+                <div className="image">
                   <img src={why} alt="" />
                 </div>
               </div>
-              <div class="col-md-7">
-                <ul class="list">
+              <div className="col-md-7">
+                <ul className="list">
                   <li>General Auto Repair & Maintenance</li>
                   <li>Transmission Repair & Replacement</li>
                   <li>Tire Repair and Replacement</li>

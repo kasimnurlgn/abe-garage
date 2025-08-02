@@ -2,27 +2,27 @@ import React from "react";
 import mybg from "../../assets/images/gallery/mybg.avif";
 function Since() {
   return (
-    <section class="video-section">
+    <section className="video-section">
       <div
         data-parallax='{"y": 50}'
-        class="sec-bg"
+        className="sec-bg"
         style={{ backgroundImage: `url(${mybg})` }}
       ></div>
-      <div class="auto-container">
+      <div className="auto-container">
         <h5>Working since 1999</h5>
         <h2>
           We are leader <br /> in Car Mechanical Work
         </h2>
-        <div class="video-box">
-          <div class="video-btn">
+        <div className="video-box">
+          <div className="video-btn">
             <a
               href="https://www.youtube.com/watch?v=PUkAIAIzA0I"
-              class="overlay-link lightbox-image video-fancybox ripple"
+              className="overlay-link lightbox-image video-fancybox ripple"
             >
-              <i class="flaticon-play"></i>
+              <i className="flaticon-play"></i>
             </a>
           </div>
-          <div class="text">
+          <div className="text">
             Watch intro video <br /> about us
           </div>
         </div>
