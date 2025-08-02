@@ -1,143 +1,50 @@
 import React from "react";
-import bg from "../../assets/images/gallery/bg.png";
-import { Link } from "react-router-dom";
-function ContactUs() {
+import { MdOutlineEmail } from "react-icons/md";
+import { CiLocationOn } from "react-icons/ci";
+import { FaPhoneAlt } from "react-icons/fa";
+function Contact() {
   return (
-    <>
-      <section className="page-title" style={{ backgroundImage: `url(${bg}` }}>
-        <div className="auto-container">
-          <h2>Contact</h2>
-          <ul className="page-breadcrumb">
-            <li>
-              <Link to="/">home</Link>
-            </li>
-            <li>Contact</li>
-          </ul>
-        </div>
-        {/* <h1 data-parallax='{"x": 200}'>Contact Us</h1> */}
-      </section>
-      <section className="contact-section">
-        <div className="auto-container">
-          <div className="contact-title">
-            <h2>Drop us message</h2>
+    <section className="about-section">
+      <div className="auto-container">
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="image-box">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31523.80380701426!2d38.712689898073435!3d9.020316224195062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b860b3a4e6733%3A0x3ae74ad7c1cd9d1e!2sAbinet%2C%20Addis%20Ababa!5e0!3m2!1sen!2set!4v1711117652523!5m2!1sen!2set"
+                width="600"
+                height="450"
+                style={{ border: "0" }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <div className="col-lg-6 pl-lg-5">
+            <div className="sec-title">
+              <h2>Our Address</h2>
+              <h4>
+                Completely synergize resource Professionally cultivate
+                one-to-one customer service.
+              </h4>
+            </div>
+
             <div className="text">
-              Praising pain was born and I will give you a complete account of
-              the system, and{" "}
-            </div>
-          </div>
-          <div className="row clearfix">
-            {/* <!--Form Column--> */}
-            <div className="form-column col-lg-7">
-              <div className="inner-column">
-                {/* <!--Contact Form--> */}
-                <div className="contact-form">
-                  <form method="post" action="sendemail.php" id="contact-form">
-                    <div className="row clearfix">
-                      <div className="form-group col-md-12">
-                        <input
-                          type="text"
-                          name="form_name"
-                          value=""
-                          placeholder="Your Name"
-                          required
-                        />
-                      </div>
-
-                      <div className="form-group col-md-12">
-                        <input
-                          type="text"
-                          name="email"
-                          value=""
-                          placeholder="Your Email"
-                          required
-                        />
-                      </div>
-
-                      <div className="form-group col-md-12">
-                        <input
-                          type="text"
-                          name="form_subject"
-                          value=""
-                          placeholder="Subject"
-                          required
-                        />
-                      </div>
-
-                      <div className="form-group col-md-12">
-                        <textarea
-                          name="form_message"
-                          placeholder="Massage"
-                        ></textarea>
-                      </div>
-
-                      <div className="form-group col-md-12">
-                        <input
-                          id="form_botcheck"
-                          name="form_botcheck"
-                          className="form-control"
-                          type="hidden"
-                          value=""
-                        />
-                        <button
-                          className="theme-btn btn-style-one"
-                          type="submit"
-                          data-loading-text="Please wait..."
-                        >
-                          <span>Submit now</span>
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                {/* <!--End Contact Form--> */}
-              </div>
-            </div>
-
-            {/* <!--Info Column--> */}
-            <div className="info-column col-lg-5">
-              <div className="inner-column">
-                <h4>Our Address</h4>
-                <div className="text">
-                  Completely synergize resource taxing relationships via premier
-                  niche markets. Professionally cultivate one-to-one customer
-                  service.
-                </div>
-                <ul>
-                  <li>
-                    <i className="flaticon-pin"></i>
-                    <span>Address:</span> 54B, Tailstoi Town 5238 MT, La city,
-                    IA 5224
-                  </li>
-                  <li>
-                    <i className="flaticon-email"></i>
-                    <span>email:</span> contact@buildtruck.com
-                  </li>
-                  <li>
-                    <i className="flaticon-phone"></i>
-                    <span>phone:</span> 1800 456 7890 / 1254 897 3654
-                  </li>
-                </ul>
-              </div>
+              {" "}
+              <CiLocationOn color="red" />
+              Address:
+              <p>Addis Ababa,Ethipia</p>
+              <MdOutlineEmail color="red" />
+              Email:
+              <p>abegarage@net.et</p>
+              <FaPhoneAlt color="red" />
+              <p>+251-11-555-987</p>
             </div>
           </div>
         </div>
-      </section>
-      {/* <!--End Contact Section--> */}
-
-      {/* <!-- Map Section --> */}
-      <section className="map-section">
-        <div className="contact-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3071.2910802067827!2d90.45905169331171!3d23.691532202989123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1577214205224!5m2!1sen!2sbd"
-            width="600"
-            height="470"
-            style={{ border: 0, width: "100%" }}
-            allowfullscreen=""
-          ></iframe>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 
-export default ContactUs;
+export default Contact;
