@@ -70,7 +70,11 @@ function Login() {
                   <div className="row clearfix">
                     <div className="form-group col-md-12">
                       {serverError && (
-                        <div className="validation-error" role="alert">
+                        <div
+                          className="validation-error"
+                          role="alert"
+                          style={{ color: "red" }}
+                        >
                           {serverError}
                         </div>
                       )}
@@ -82,7 +86,11 @@ function Login() {
                         placeholder="Email"
                       />
                       {emailError && (
-                        <div className="validation-error" role="alert">
+                        <div
+                          className="validation-error"
+                          role="alert"
+                          style={{ color: "red" }}
+                        >
                           {emailError}
                         </div>
                       )}
@@ -97,7 +105,11 @@ function Login() {
                         placeholder="Password"
                       />
                       {passwordError && (
-                        <div className="validation-error" role="alert">
+                        <div
+                          className="validation-error"
+                          role="alert"
+                          style={{ color: "red" }}
+                        >
                           {passwordError}
                         </div>
                       )}
