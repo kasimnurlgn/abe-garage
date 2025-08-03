@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Dashboard() {
+function DashboardCard() {
   const Dashboard = [
     {
       link: "/admin/orders",
@@ -101,4 +101,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default DashboardCard;
