@@ -44,7 +44,7 @@ function Login() {
       localStorage.setItem("employee", JSON.stringify(result.employee));
 
       // Navigate after login
-      navigate(location.state?.from?.pathname || "/");
+      navigate("/dashboard");
     } catch (error) {
       // axios error handling
       if (error.response && error.response.data && error.response.data.error) {

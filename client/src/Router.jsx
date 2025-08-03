@@ -6,6 +6,7 @@ import Service from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
 import Login from "./pages/Login/Login";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Dashboard from "./components/Admin/Dashboard/Dashboard";
 function RouterApp() {
   return (
     <>
@@ -16,8 +17,7 @@ function RouterApp() {
         <Route path="/services" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        {/* Redirect to Home for unmatched routes */}
-        {/* Add more routes as needed */}
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </>
   );
