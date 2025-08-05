@@ -7,6 +7,7 @@ import Contact from "./pages/Contact/Contact";
 import Login from "./pages/Login/Login";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Dashboard from "./pages/Admin/Dashboard/Dashboard";
+import GetOrders from "./pages/Admin/Orders/GetOrders/GetOrders";
 function RouterApp() {
   return (
     <>
@@ -18,6 +19,7 @@ function RouterApp() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
+        <Route path="/admin/orders" element={<GetOrders />} />
       </Routes>
     </>
   );
