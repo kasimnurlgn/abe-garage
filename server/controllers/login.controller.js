@@ -1,3 +1,4 @@
+// controllers/login.controller.js
 const loginService = require("../services/login.service");
 const jwt = require("jsonwebtoken");
 const logger = require("../utils/logger");
@@ -37,6 +38,34 @@ const loginController = {
     } catch (err) {
       logger.error("Error during login:", err.message);
       res.status(500).json({ error: "Failed to authenticate" });
+    }
+  },
+
+  // New method to check authentication status
+  async checkAuth(req, res) {
+    try {
+      const employee = await loginService.getEmployeeById(req.user.employee_id);
+      if (!employee) {
+        return res.status(404).json({ error: "Employee not found" });
+      }
+
+      // Map company_role_name to a numeric role_id for frontend compatibility
+      const roleIdMap = {
+        admin: 3, // Map "admin" to 3 for frontend
+        // Add other roles as needed, e.g., "user": 1
+      };
+
+      res.status(200).json({
+        employee_token: req.header("Authorization")?.replace("Bearer ", ""),
+        employee_role: roleIdMap[employee.role] || 1, // Default to 1 if role not mapped
+        employee_id: employee.employee_id,
+        email: employee.email,
+        first_name: employee.first_name,
+        last_name: employee.last_name,
+      });
+    } catch (err) {
+      logger.error("Error during auth check:", err.message);
+      res.status(500).json({ error: "Failed to verify authentication" });
     }
   },
 };

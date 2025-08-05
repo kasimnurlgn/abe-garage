@@ -4,7 +4,6 @@ const errorHandler = (err, req, res, next) => {
   // Log the error with stack trace for debugging
   logger.error(`Error: ${err.message}, Stack: ${err.stack}`);
 
-  
   // Handle validation errors (e.g., invalid input in controllers)
   if (err.name === "ValidationError") {
     return res.status(400).json({ error: err.message });

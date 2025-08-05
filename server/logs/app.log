@@ -866,3 +866,21 @@
 2025-07-24 18:03:07 [INFO]: Database connected successfully
 2025-07-24 18:04:09 [INFO]: Server running on port 5000
 2025-07-24 18:04:09 [INFO]: Database connected successfully
+2025-08-02 17:05:21 [INFO]: Server running on port 5000
+2025-08-02 17:05:22 [INFO]: Database connected successfully
+2025-08-02 17:32:44 [INFO]: POST /api/login
+2025-08-02 17:33:08 [INFO]: POST /api/login
+2025-08-02 17:34:25 [INFO]: POST /api/login
+2025-08-02 17:34:25 [WARN]: Login attempt failed: Invalid password for email admin@abesgarage.com
+2025-08-02 18:08:45 [INFO]: POST /api/login
+2025-08-02 18:08:45 [WARN]: Login attempt failed: Invalid password for email admin@abesgarage.com
+2025-08-02 18:11:56 [INFO]: POST /api/login
+2025-08-02 18:11:57 [WARN]: Login attempt failed: Invalid password for email admin@abesgarage.com
+2025-08-02 18:12:07 [INFO]: POST /api/login
+2025-08-03 14:10:59 [INFO]: Server running on port 5000
+2025-08-03 14:10:59 [INFO]: Database connected successfully
+2025-08-03 14:27:45 [INFO]: POST /api/login
+2025-08-03 15:02:28 [INFO]: POST /api/login
+2025-08-03 17:03:07 [INFO]: Server running on port 5000
+2025-08-03 17:03:07 [ERROR]: Database connection failed:
+2025-08-03 17:05:10 [INFO]: POST /api/login
