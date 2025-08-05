@@ -52,7 +52,7 @@ function Login() {
       );
 
       // Navigate after login
-      navigate("/dashboard");
+      navigate("/admin/dashboard");
     } catch (error) {
       if (error.response && error.response.data && error.response.data.error) {
         setServerError(error.response.data.error);

@@ -8,7 +8,10 @@ function DashboardSidebar() {
         <h1 className="ml-4">Admin Menu</h1>
       </div>
       <div className={css.listItems} style={{ backgroundColor: "#232B48" }}>
-        <Link to="/admin" className={`list-group-item ${css.listItemOverride}`}>
+        <Link
+          to="/admin/dashboard"
+          className={`list-group-item ${css.listItemOverride}`}
+        >
           Dashboard
         </Link>
         <Link
