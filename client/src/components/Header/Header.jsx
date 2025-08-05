@@ -1,15 +1,35 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/custom/logo.png";
 import iconBar from "../../assets/images/icons/icon-bar.png";
 import logoTwo from "../../assets/images/logo-two.png";
+import { getAuth, logOut } from "../../context/auth";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [employee, setEmployee] = useState(null);
+  const navigate = useNavigate();
+
+  // Fetch employee data on mount
+  useEffect(() => {
+    const fetchEmployee = async () => {
+      const emp = await getAuth();
+      setEmployee(emp.employee_token ? emp : null);
+    };
+    fetchEmployee();
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const handleLogout = () => {
+    logOut();
+    setEmployee(null);
+    navigate("/login");
+  };
+
+  // jQuery for mobile menu
   useEffect(() => {
     if (window.$ && typeof window.$ === "function") {
       window.$(".mobile-nav-toggler").on("click", function () {
@@ -37,9 +57,17 @@ const Header = () => {
               </div>
             </div>
             <div className="right-column">
-              <div className="phone-number">
-                Schedule Your Appontment Today : <strong>1800 456 7890</strong>
-              </div>
+              {employee ? (
+                <div className="phone-number mr-4">
+                  {" "}
+                  Welcome, {employee.employee_first_name}
+                </div>
+              ) : (
+                <div className="phone-number">
+                  Schedule Your Appointment Today :{" "}
+                  <strong>1800 456 7890</strong>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -90,9 +118,20 @@ const Header = () => {
               </div>
               <div className="search-btn"></div>
               <div className="link-btn">
-                <Link to="/login" className="theme-btn btn-style-one">
-                  Login
-                </Link>
+                {employee ? (
+                  <>
+                    <button
+                      className="theme-btn btn-style-one"
+                      onClick={handleLogout}
+                    >
+                      Logout
+                    </button>
+                  </>
+                ) : (
+                  <Link to="/login" className="theme-btn btn-style-one">
+                    Login
+                  </Link>
+                )}
               </div>
             </div>
           </div>
@@ -148,9 +187,20 @@ const Header = () => {
                 </div>
                 <div className="search-btn"></div>
                 <div className="link-btn">
-                  <Link to="/login" className="theme-btn btn-style-one">
-                    Login
-                  </Link>
+                  {employee ? (
+                    <>
+                      <button
+                        className="theme-btn btn-style-one"
+                        onClick={handleLogout}
+                      >
+                        Logout
+                      </button>
+                    </>
+                  ) : (
+                    <Link to="/login" className="theme-btn btn-style-one">
+                      Login
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
@@ -194,9 +244,21 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/login" onClick={toggleMobileMenu}>
-                  Login
-                </Link>
+                {employee ? (
+                  <button
+                    className="theme-btn btn-style-one"
+                    onClick={() => {
+                      handleLogout();
+                      toggleMobileMenu();
+                    }}
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link to="/login" onClick={toggleMobileMenu}>
+                    Login
+                  </Link>
+                )}
               </li>
             </ul>
           </div>

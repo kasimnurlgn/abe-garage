@@ -14,13 +14,16 @@ const getAuth = async () => {
   const employee = JSON.parse(localStorage.getItem("employee")) || {};
   if (employee && employee.employee_token) {
     const decodedToken = await decodeTokenPayload(employee.employee_token);
-    // Map backend fields to frontend expectations
     employee.employee_id = decodedToken.employee_id;
-    employee.employee_role = decodedToken.role; // Use 'role' from JWT
-    employee.employee_first_name = employee.first_name; // Use 'first_name' from localStorage
+    employee.employee_role = decodedToken.role;
+    employee.employee_first_name = employee.first_name;
     return employee;
   }
   return {};
 };
 
-export { getAuth };
+const logOut = () => {
+  localStorage.removeItem("employee");
+};
+
+export { getAuth, logOut };
