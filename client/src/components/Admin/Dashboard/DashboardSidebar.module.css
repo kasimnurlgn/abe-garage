@@ -1,0 +1,11 @@
+.listItemOverride {
+  color: white !important;
+  background-color: #232b48;
+}
+.sidebarHeader {
+  background-color: #1e2331;
+  color: white;
+}
+.sidebarHeader h1 {
+  color: white;
+}

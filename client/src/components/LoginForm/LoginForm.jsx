@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../api/axios";
 
 function Login() {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,14 +38,22 @@ function Login() {
       const response = await axiosInstance.post("/login", { email, password });
       const result = response.data;
 
-      // Save token and employee info to localStorage
-      localStorage.setItem("token", result.token);
-      localStorage.setItem("employee", JSON.stringify(result.employee));
+      // Save token and employee info to localStorage in the format getAuth expects
+      localStorage.setItem(
+        "employee",
+        JSON.stringify({
+          employee_token: result.token,
+          employee_id: result.employee.employee_id,
+          first_name: result.employee.first_name,
+          last_name: result.employee.last_name,
+          email: result.employee.email,
+          role: result.employee.role,
+        })
+      );
 
       // Navigate after login
       navigate("/dashboard");
     } catch (error) {
-      // axios error handling
       if (error.response && error.response.data && error.response.data.error) {
         setServerError(error.response.data.error);
       } else {

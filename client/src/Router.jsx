@@ -6,7 +6,7 @@ import Service from "./pages/Services/Services";
 import Contact from "./pages/Contact/Contact";
 import Login from "./pages/Login/Login";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import Dashboard from "./components/Admin/Dashboard/DashboardCard";
+import Dashboard from "./pages/Admin/Dashboard/Dashboard";
 function RouterApp() {
   return (
     <>
