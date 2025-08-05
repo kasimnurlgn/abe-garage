@@ -52,7 +52,7 @@ function GetOrders() {
       case "pending":
         return <span className={styles.received}>Received</span>;
       case "in_progress":
-        return <span className={styles.serviceStatus}>In progress</span>;
+        return <span className={styles.in_progress}>In progress</span>;
       case "completed":
         return <span className={styles.completed}>Completed</span>;
       default:
