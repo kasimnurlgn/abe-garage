@@ -11,6 +11,7 @@ import GetOrders from "./pages/Admin/Orders/GetOrders/GetOrders";
 import EditOrder from "./pages/Admin/Orders/EditOrder/EditOrder";
 import CreateOrder from "./pages/Admin/Orders/CreateOrder/CreateOrder";
 import GetCustomers from "./pages/Admin/Customers/GetCustomers/GetCustomers";
+import EditCustomer from "./pages/Admin/Customers/EditCustomer/EditCustomer";
 function RouterApp() {
   return (
     <>
@@ -29,6 +30,7 @@ function RouterApp() {
           element={<CreateOrder />}
         />
         <Route path="/admin/customers" element={<GetCustomers />} />
+        <Route path="/admin/customers/edit/:id" element={<EditCustomer />} />
       </Routes>
     </>
   );

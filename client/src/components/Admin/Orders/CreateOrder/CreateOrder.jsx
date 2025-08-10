@@ -1,10 +1,9 @@
-// src/components/CreateOrder.js
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axiosInstance from "../../../../api/axios";
 import { FaEdit, FaWindowClose } from "react-icons/fa";
 import { BeatLoader } from "react-spinners";
-import styles from "./CreateOrder.module.css"; // Reuse your friend's CSS
+import styles from "./CreateOrder.module.css"; 
 
 function CreateOrder() {
   const { customer_hash } = useParams();
@@ -19,9 +18,9 @@ function CreateOrder() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Assume token is stored in localStorage (adjust based on your auth setup)
+ 
   const token = localStorage.getItem("employee_token");
-  const employeeId = localStorage.getItem("employee_id"); // Adjust based on your auth setup
+  const employeeId = localStorage.getItem("employee_id"); 
 
   // Fetch customer by hash
   const fetchCustomer = async () => {
@@ -48,7 +47,7 @@ function CreateOrder() {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      setVehicle(response.data[0]); // Assume first vehicle
+      setVehicle(response.data[0]); 
     } catch (err) {
       setError("Failed to fetch vehicle");
       console.error(err);
