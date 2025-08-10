@@ -10,6 +10,7 @@ import Dashboard from "./pages/Admin/Dashboard/Dashboard";
 import GetOrders from "./pages/Admin/Orders/GetOrders/GetOrders";
 import EditOrder from "./pages/Admin/Orders/EditOrder/EditOrder";
 import CreateOrder from "./pages/Admin/Orders/CreateOrder/CreateOrder";
+import GetCustomers from "./pages/Admin/Customers/GetCustomers/GetCustomers";
 function RouterApp() {
   return (
     <>
@@ -25,8 +26,9 @@ function RouterApp() {
         <Route path="/admin/orders/edit/:order_hash" element={<EditOrder />} />
         <Route
           path="/admin/orders/create/:customer_hash"
-          element={<CreateOrder  />}
+          element={<CreateOrder />}
         />
+        <Route path="/admin/customers" element={<GetCustomers />} />
       </Routes>
     </>
   );
