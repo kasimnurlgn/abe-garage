@@ -17,36 +17,35 @@ function GetOrders() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch employee role and token
         const employee = await getAuth();
-        if (!employee.employee_token) {
-          throw new Error("Not authenticated");
+        if (
+          !employee?.employee_token ||
+          !["Admin", "Manager"].includes(employee.employee_role)
+        ) {
+          navigate("/login");
+          return;
         }
         setEmployeeRole(employee.employee_role);
 
-        // Fetch orders using axiosInstance
         const response = await axiosInstance.get("/orders", {
           headers: {
             Authorization: `Bearer ${employee.employee_token}`,
           },
         });
-        setOrders(response.data); // Backend returns array directly
+
+        setOrders(Array.isArray(response.data) ? response.data : []);
       } catch (error) {
+        console.error("Error fetching orders:", error);
         setError(error.response?.data?.error || "Failed to fetch orders");
       }
     };
     fetchData();
-  }, []);
+  }, [navigate]);
 
-  const orderDetail = (order_hash) => {
-    navigate(`/admin/order/${order_hash}`);
-  };
+  const orderDetail = (order_hash) => navigate(`/admin/order/${order_hash}`);
+  const editOrder = (order_hash) =>
+    navigate(`/admin/orders/edit/${order_hash}`);
 
-  const editOrder = (order_hash) => {
-    navigate(`/admin/update-order/${order_hash}`);
-  };
-
-  // Map backend order_status to user-friendly labels
   const getStatusLabel = (status) => {
     switch (status) {
       case "pending":
@@ -71,13 +70,13 @@ function GetOrders() {
           <Table striped bordered hover className="mb-0">
             <thead>
               <tr>
-                <th className="col-1">Order ID</th>
-                <th className="col-2">Customer</th>
-                <th className="col-2">Vehicle</th>
-                <th className="col-2">Order Date</th>
-                <th className="col-2">Received By</th>
-                <th className="col-2">Order Status</th>
-                <th className="col-1">Edit/View</th>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Vehicle</th>
+                <th>Order Date</th>
+                <th>Received By</th>
+                <th>Status</th>
+                <th>Edit/View</th>
               </tr>
             </thead>
             <tbody>

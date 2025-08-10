@@ -8,6 +8,7 @@ import Login from "./pages/Login/Login";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Dashboard from "./pages/Admin/Dashboard/Dashboard";
 import GetOrders from "./pages/Admin/Orders/GetOrders/GetOrders";
+import EditOrder from "./components/Admin/Orders/EditOrder/EditOrder";
 function RouterApp() {
   return (
     <>
@@ -20,6 +21,7 @@ function RouterApp() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/orders" element={<GetOrders />} />
+        <Route path="/admin/orders/edit/:order_hash" element={<EditOrder />} />
       </Routes>
     </>
   );

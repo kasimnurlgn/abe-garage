@@ -181,6 +181,14 @@ const Header = () => {
                         <li>
                           <Link to="/contact">Contact Us</Link>
                         </li>
+
+                        {employee && (
+                          <li>
+                            <Link to="/admin/dashboard" onClick={toggleMobileMenu}>
+                              Admin
+                            </Link>
+                          </li>
+                        )}
                       </ul>
                     </div>
                   </nav>
@@ -243,6 +251,13 @@ const Header = () => {
                   Contact Us
                 </Link>
               </li>
+              {employee && (
+                <li>
+                  <Link to="/admin/dashboard" onClick={toggleMobileMenu}>
+                    Admin
+                  </Link>
+                </li>
+              )}
               <li>
                 {employee ? (
                   <button
