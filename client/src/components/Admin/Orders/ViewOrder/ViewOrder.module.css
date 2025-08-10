@@ -1,0 +1,210 @@
+.orderDetailsPage {
+  background-color: #f4f4f4;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.orderDetailsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.customerHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+.customerName {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.shortRedLine {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ff0000;
+  margin-top: 5px;
+}
+
+.statusBadge {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.received {
+  background-color: darkgrey;
+  color: #fff;
+}
+
+.in_progress {
+  background-color: orange;
+  color: black;
+}
+
+.completed {
+  background-color: green;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.detailsCard {
+  flex: 1;
+  min-width: 280px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.customerDetails,
+.vehicleDetails,
+.orderDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.detailItem {
+  font-size: 0.9rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+.vehicleTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.orderServices {
+  margin-bottom: 20px;
+}
+
+.orderServices h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.serviceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.serviceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.serviceTitle {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.serviceStatus {
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.pending {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+.completed {
+  background-color: green;
+  color: #fff;
+}
+
+.backButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.backButton:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .orderDetailsContainer {
+    padding: 15px;
+  }
+
+  .customerName {
+    font-size: 1.5rem;
+  }
+
+  .cardHeading {
+    font-size: 1.1rem;
+  }
+
+  .detailItem,
+  .vehicleTitle,
+  .serviceTitle {
+    font-size: 0.8rem;
+  }
+
+  .statusBadge,
+  .serviceStatus {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .detailsCard {
+    min-width: 100%;
+  }
+}

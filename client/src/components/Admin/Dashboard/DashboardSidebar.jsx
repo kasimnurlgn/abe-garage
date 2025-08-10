@@ -21,7 +21,7 @@ function DashboardSidebar() {
           Orders
         </Link>
         <Link
-          to="/admin/order"
+          to="/admin/orders/create/:customer_hash"
           className={`list-group-item ${css.listItemOverride}`}
         >
           New order
