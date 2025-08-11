@@ -12,6 +12,7 @@ import EditOrder from "./pages/Admin/Orders/EditOrder/EditOrder";
 import CreateOrder from "./pages/Admin/Orders/CreateOrder/CreateOrder";
 import GetCustomers from "./pages/Admin/Customers/GetCustomers/GetCustomers";
 import EditCustomer from "./pages/Admin/Customers/EditCustomer/EditCustomer";
+import AddCustomer from "./pages/Admin/Customers/AddCustomer/AddCustomer";
 function RouterApp() {
   return (
     <>
@@ -31,6 +32,7 @@ function RouterApp() {
         />
         <Route path="/admin/customers" element={<GetCustomers />} />
         <Route path="/admin/customers/edit/:id" element={<EditCustomer />} />
+        <Route path="/admin/add-customer" element={<AddCustomer />} />
       </Routes>
     </>
   );
