@@ -71,9 +71,10 @@ function ServicesList() {
             {error && <p className={styles.error}>{error}</p>}
             {isAdminOrManager && (
               <button
-                className={styles.createButton}
+                className="btn btn-primary d-flex align-items-center gap-2 shadow-sm px-4 py-2 rounded-pill"
                 onClick={() => navigate("/services/create")}
               >
+                <i className="bi bi-plus-circle"></i>
                 Create New Service
               </button>
             )}
