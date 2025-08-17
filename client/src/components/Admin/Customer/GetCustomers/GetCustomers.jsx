@@ -42,6 +42,7 @@ function GetCustomers() {
           const response = await axiosInstance.get("/customers", {
             headers: { Authorization: `Bearer ${employee.employee_token}` },
           });
+          console.log("Fetched customers:", response.data); // Log for debugging
           setCustomers(response.data);
           setError("");
         } catch (err) {
@@ -50,7 +51,7 @@ function GetCustomers() {
             err.response?.data?.error || "Failed to fetch customers";
           setError(message);
           if (err.response?.status === 401) {
-            localStorage.removeItem("employee"); // Clear invalid token
+            localStorage.removeItem("employee");
             navigate("/login");
           }
         } finally {
@@ -85,7 +86,7 @@ function GetCustomers() {
   };
 
   if (loading) return <div>Loading...</div>;
-  if (!employee?.employee_token) return null; // Redirect handled in useEffect
+  if (!employee?.employee_token) return null;
 
   return (
     <section className="contact-section">
@@ -134,7 +135,13 @@ function GetCustomers() {
                       "MM-dd-yyyy | HH:mm"
                     )}
                   </td>
-                  <td>{customer.customer_active_status ? "Yes" : "No"}</td>
+                  <td>
+                    {customer.customer_active_status === 1
+                      ? "Yes"
+                      : customer.customer_active_status === 0
+                      ? "No"
+                      : "Unknown"}
+                  </td>
                   <td>
                     <div className="edit-delete-icons">
                       <button

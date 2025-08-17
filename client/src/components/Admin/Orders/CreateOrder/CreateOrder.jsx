@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axiosInstance from "../../../../api/axios";
 import { FaEdit, FaWindowClose } from "react-icons/fa";
 import { BeatLoader } from "react-spinners";
-import styles from "./CreateOrder.module.css"; 
+import styles from "./CreateOrder.module.css";
 
 function CreateOrder() {
   const { customer_hash } = useParams();
@@ -18,9 +18,8 @@ function CreateOrder() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
- 
   const token = localStorage.getItem("employee_token");
-  const employeeId = localStorage.getItem("employee_id"); 
+  const employeeId = localStorage.getItem("employee_id");
 
   // Fetch customer by hash
   const fetchCustomer = async () => {
@@ -47,7 +46,7 @@ function CreateOrder() {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      setVehicle(response.data[0]); 
+      setVehicle(response.data[0]);
     } catch (err) {
       setError("Failed to fetch vehicle");
       console.error(err);

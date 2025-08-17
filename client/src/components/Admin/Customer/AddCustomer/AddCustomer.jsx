@@ -98,7 +98,7 @@ function AddCustomer() {
     }
   };
 
-  if (!employee?.employee_token) return null; // Redirect handled in useEffect
+  if (!employee?.employee_token) return null;
 
   return (
     <section className="contact-section">
@@ -185,6 +185,7 @@ function AddCustomer() {
                           onChange={(event) =>
                             setActiveCustomer(event.target.checked)
                           }
+                          className="mr-3"
                         />{" "}
                         Active customer
                       </label>
