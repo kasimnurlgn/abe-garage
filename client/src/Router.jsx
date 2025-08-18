@@ -16,6 +16,7 @@ import AddCustomer from "./pages/Admin/Customers/AddCustomer/AddCustomer";
 import EditService from "./pages/Admin/Services/EditService/EditService";
 import ServicesList from "./pages/Admin/Services/ServiceList/ServicesList";
 import EmployeesList from "./pages/Admin/Employees/EmployeesList/EmployeesList";
+import AddEmployee from "./pages/Admin/Employees/AddEmployee/AddEmployee";
 
 function RouterApp() {
   return (
@@ -40,6 +41,7 @@ function RouterApp() {
         <Route path="/admin/services" element={<ServicesList />} />
         <Route path="/services/edit/:id" element={<EditService />} />
         <Route path="/admin/employees" element={<EmployeesList />} />
+        <Route path="/admin/add-employee" element={<AddEmployee />} />
       </Routes>
     </>
   );

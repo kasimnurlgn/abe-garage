@@ -98,9 +98,10 @@ function EmployeesList() {
   if (error) return <div className="alert alert-danger">{error}</div>;
 
   return (
-    <div className="container mt-4">
-      <h2>Our Employees</h2>
-      <p>Browse and manage our employees.</p>
+    <div className="container mt-4 ">
+      <div className="contact-title">
+        <h2 className="my-2"> Employees</h2>
+      </div>
 
       {isAdminOrManager && (
         <button
