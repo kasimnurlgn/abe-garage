@@ -94,7 +94,7 @@ function EditService() {
       });
       console.log("Update service response:", response.data); // Debug
       setError("");
-      navigate("/services");
+      navigate("/admin/services");
     } catch (err) {
       console.error("Update service error:", err.response || err); // Debug
       setError(err.response?.data?.error || "Failed to update service");
@@ -169,13 +169,6 @@ function EditService() {
                 <div className="d-flex gap-2">
                   <button type="submit" className="btn btn-primary fw-semibold">
                     Update Service
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-outline-secondary"
-                    onClick={() => navigate("/services")}
-                  >
-                    Cancel
                   </button>
                 </div>
               </form>

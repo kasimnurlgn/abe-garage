@@ -65,7 +65,7 @@ function CreateService() {
       });
       console.log("Create service response:", response.data); // Debug
       setError("");
-      navigate("/services");
+      navigate("/admin/services");
     } catch (err) {
       console.error("Create service error:", err.response || err); // Debug
       setError(err.response?.data?.error || "Failed to create service");

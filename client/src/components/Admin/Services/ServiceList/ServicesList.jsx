@@ -31,7 +31,7 @@ function ServicesList() {
         }
         setEmployee(authData);
       } catch (err) {
-        setError("Authentication error. Please log in again.");
+        setError("Authentication error. Please log in again.", err);
         navigate("/login");
       }
     };
