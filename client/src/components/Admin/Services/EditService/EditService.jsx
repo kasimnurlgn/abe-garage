@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axiosInstance from "../../../../api/axios";
 import { getAuth } from "../../../../context/auth";
-import styles from "./CreateService.module.css";
+import styles from "./EditService.module.css"
 import { BeatLoader } from "react-spinners";
 
-function CreateService() {
+function EditService() {
+  const { id } = useParams();
   const [formData, setFormData] = useState({
     service_name: "",
     service_description: "",
@@ -27,12 +28,12 @@ function CreateService() {
         const authData = await getAuth();
         console.log("Auth data:", authData); // Debug
         if (!authData.employee_token) {
-          setError("Please log in to create a service");
+          setError("Please log in to edit a service");
           navigate("/login");
           return;
         }
         if (!["Admin", "Manager"].includes(authData.employee_role)) {
-          setError("Only Admins or Managers can create services");
+          setError("Only Admins or Managers can edit services");
           navigate("/services");
           return;
         }
@@ -46,10 +47,38 @@ function CreateService() {
     fetchEmployee();
   }, [navigate]);
 
+  // Fetch service data
+  useEffect(() => {
+    if (!employee.employee_token) return;
+    const fetchService = async () => {
+      setLoading(true);
+      try {
+        const response = await axiosInstance.get(`/services/${id}`);
+        console.log("Service data:", response.data); // Debug
+        setFormData({
+          service_name: response.data.service_name,
+          service_description: response.data.service_description || "",
+          service_price: response.data.service_price.toString(),
+        });
+        setError("");
+      } catch (err) {
+        console.error("Fetch service error:", err.response || err); // Debug
+        setError(err.response?.data?.error || "Failed to fetch service");
+        if (err.response?.status === 401) {
+          setError("Session expired. Please log in again.");
+          navigate("/login");
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchService();
+  }, [id, employee.employee_token, navigate]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isAdminOrManager) {
-      setError("Only Admins or Managers can create services");
+      setError("Only Admins or Managers can edit services");
       return;
     }
     if (!formData.service_name || !formData.service_price) {
@@ -58,17 +87,17 @@ function CreateService() {
     }
     setLoading(true);
     try {
-      const response = await axiosInstance.post("/services", {
+      const response = await axiosInstance.put(`/services/${id}`, {
         service_name: formData.service_name,
         service_description: formData.service_description,
         service_price: parseFloat(formData.service_price),
       });
-      console.log("Create service response:", response.data); // Debug
+      console.log("Update service response:", response.data); // Debug
       setError("");
       navigate("/services");
     } catch (err) {
-      console.error("Create service error:", err.response || err); // Debug
-      setError(err.response?.data?.error || "Failed to create service");
+      console.error("Update service error:", err.response || err); // Debug
+      setError(err.response?.data?.error || "Failed to update service");
     } finally {
       setLoading(false);
     }
@@ -83,19 +112,17 @@ function CreateService() {
       <div className="contact-section">
         <div className="auto-container">
           <div className="contact-title">
-            <h2>Add a New Service</h2>
+            <h2>Edit Service</h2>
             <p className={styles.description}>
-              Fill in the details below to create a new service.
+              Update the details below to edit the service.
             </p>
             {error && <p className={styles.error}>{error}</p>}
             {loading ? (
               <BeatLoader color="#123abc" size={10} />
             ) : (
               <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <label htmlFor="service_name" className="form-label">
-                    Service Name
-                  </label>
+                <div>
+                  <label htmlFor="service_name">Service Name</label>
                   <input
                     type="text"
                     name="service_name"
@@ -103,27 +130,21 @@ function CreateService() {
                     onChange={handleChange}
                     placeholder="Enter service name"
                     required
-                    className="form-control"
+                    className={styles.input}
                   />
                 </div>
-
-                <div className="mb-3">
-                  <label htmlFor="service_description" className="form-label">
-                    Description
-                  </label>
+                <div>
+                  <label htmlFor="service_description">Description</label>
                   <textarea
                     name="service_description"
                     value={formData.service_description}
                     onChange={handleChange}
                     placeholder="Enter service description"
-                    className="form-control"
+                    className={styles.textarea}
                   />
                 </div>
-
-                <div className="mb-3">
-                  <label htmlFor="service_price" className="form-label">
-                    Price ($)
-                  </label>
+                <div>
+                  <label htmlFor="service_price">Price ($)</label>
                   <input
                     type="number"
                     name="service_price"
@@ -132,21 +153,16 @@ function CreateService() {
                     placeholder="Enter price"
                     step="0.01"
                     required
-                    className="form-control"
+                    className={styles.input}
                   />
                 </div>
-
-                <div className="d-flex gap-2">
-                  <button
-                    className="btn btn-danger text-white"
-                    type="submit"
-                    data-loading-text="Please wait..."
-                  >
-                    Create Service
+                <div className={styles.button_container}>
+                  <button type="submit" className={styles.createButton}>
+                    Update Service
                   </button>
                   <button
                     type="button"
-                    className="btn btn-outline-secondary"
+                    className={styles.createButton}
                     onClick={() => navigate("/services")}
                   >
                     Cancel
@@ -161,4 +177,4 @@ function CreateService() {
   );
 }
 
-export default CreateService;
+export default EditService;

@@ -69,7 +69,7 @@ function ServicesList() {
               towards a streamlined cloud solution.
             </p>
             {error && <p className={styles.error}>{error}</p>}
-            {isAdminOrManager && (
+            {/* {isAdminOrManager && (
               <button
                 className="btn btn-primary d-flex align-items-center gap-2 shadow-sm px-4 py-2 rounded-pill"
                 onClick={() => navigate("/services/create")}
@@ -77,7 +77,7 @@ function ServicesList() {
                 <i className="bi bi-plus-circle"></i>
                 Create New Service
               </button>
-            )}
+            )} */}
             {loading ? (
               <BeatLoader color="#123abc" size={10} />
             ) : services.length === 0 ? (
