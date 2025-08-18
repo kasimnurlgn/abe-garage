@@ -84,7 +84,7 @@ function CreateService() {
         <div className="auto-container">
           <div className="contact-title">
             <h2>Add a New Service</h2>
-            <p className={styles.description}>
+            <p className="semi-bold">
               Fill in the details below to create a new service.
             </p>
             {error && <p className={styles.error}>{error}</p>}
@@ -93,63 +93,65 @@ function CreateService() {
             ) : (
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label htmlFor="service_name" className="form-label">
+                  {/* <label htmlFor="service_name" className="form-label">
                     Service Name
-                  </label>
+                  </label> */}
                   <input
                     type="text"
                     name="service_name"
                     value={formData.service_name}
                     onChange={handleChange}
-                    placeholder="Enter service name"
+                    placeholder="Service name"
                     required
-                    className="form-control"
+                    className="form-control w-75"
                   />
                 </div>
 
                 <div className="mb-3">
-                  <label htmlFor="service_description" className="form-label">
+                  {/* <label htmlFor="service_description" className="form-label">
                     Description
-                  </label>
+                  </label> */}
                   <textarea
                     name="service_description"
                     value={formData.service_description}
                     onChange={handleChange}
-                    placeholder="Enter service description"
-                    className="form-control"
+                    placeholder="Service description"
+                    className="form-control w-75"
+                    rows="5"
                   />
                 </div>
 
-                <div className="mb-3">
-                  <label htmlFor="service_price" className="form-label">
+                <div className="mb-3 semi-bold">
+                  {/* <label
+                    htmlFor="service_price"
+                    className="form-label semi-bold"
+                  >
                     Price ($)
-                  </label>
+                  </label> */}
                   <input
                     type="number"
                     name="service_price"
                     value={formData.service_price}
                     onChange={handleChange}
-                    placeholder="Enter price"
+                    placeholder="Price"
                     step="0.01"
                     required
-                    className="form-control"
+                    className="form-control w-75"
                   />
                 </div>
 
                 <div className="d-flex gap-2">
                   <button
-                    className="btn btn-danger text-white"
                     type="submit"
                     data-loading-text="Please wait..."
+                    style={{
+                      backgroundColor: "red",
+                      color: "white",
+                      border: "none",
+                    }}
+                    className="p-3"
                   >
-                    Create Service
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-outline-secondary"
-                    onClick={() => navigate("/services")}
-                  >
-                    Cancel
+                    <span className="fw-semibold">Add Service</span>
                   </button>
                 </div>
               </form>
