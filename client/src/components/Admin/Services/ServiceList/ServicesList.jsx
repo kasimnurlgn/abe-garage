@@ -96,6 +96,7 @@ function ServicesList() {
                           e.preventDefault();
                           navigate(`/services/${service.service_id}`);
                         }}
+                        style={{ color: "#0b132b", textDecoration: "none" }} // dark blue-black
                       >
                         {service.service_name}
                       </a>
