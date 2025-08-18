@@ -79,7 +79,7 @@ function CreateService() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className="my-0">
       <div className="contact-section">
         <div className="auto-container">
           <div className="contact-title">

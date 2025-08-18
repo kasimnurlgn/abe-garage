@@ -57,7 +57,7 @@ function ServicesList() {
   }, [employee.employee_token]);
 
   return (
-    <div className={styles.container}>
+    <div className="mb-0 pb-0">
       <div className="contact-section">
         <div className="auto-container">
           <div className="contact-title">
@@ -118,9 +118,23 @@ function ServicesList() {
                         <FaEdit color="red" />
                       </button>
                       <button
-                        onClick={() =>
-                          navigate(`/services/delete/${service.service_id}`)
-                        }
+                        onClick={async () => {
+                          try {
+                            await axiosInstance.delete(
+                              `/services/${service.service_id}`
+                            );
+                            setServices((prev) =>
+                              prev.filter(
+                                (s) => s.service_id !== service.service_id
+                              )
+                            );
+                          } catch (err) {
+                            setError(
+                              err.response?.data?.error ||
+                                "Failed to delete service"
+                            );
+                          }
+                        }}
                         className={styles.iconButton}
                       >
                         <MdDelete />
