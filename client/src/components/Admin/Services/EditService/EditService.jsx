@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axiosInstance from "../../../../api/axios";
 import { getAuth } from "../../../../context/auth";
-import styles from "./EditService.module.css";
 import { BeatLoader } from "react-spinners";
 
 function EditService() {
@@ -108,15 +107,15 @@ function EditService() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className="container">
       <div className="contact-section">
         <div className="auto-container">
           <div className="contact-title">
             <h2>Edit Service</h2>
-            <p className={styles.description}>
+            <p className="description">
               Update the details below to edit the service.
             </p>
-            {error && <p className={styles.error}>{error}</p>}
+            {error && <p className="error">{error}</p>}
             {loading ? (
               <BeatLoader color="#123abc" size={10} />
             ) : (

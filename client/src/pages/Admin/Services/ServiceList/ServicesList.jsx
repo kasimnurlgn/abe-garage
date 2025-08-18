@@ -2,6 +2,7 @@ import React from "react";
 import DashboardSidebar from "../../../../components/Admin/Dashboard/DashboardSidebar";
 import Layout from "../../../Layout/Layout";
 import ServicesList from "../../../../components/Admin/Services/ServiceList/ServicesList";
+import CreateService from "../../../../components/Admin/Services/CreateService/CreateService";
 function Services() {
   return (
     <Layout>
@@ -12,6 +13,7 @@ function Services() {
           </div>
           <div className="col-md-9 ">
             <ServicesList />
+            <CreateService />
           </div>
         </div>
       </div>

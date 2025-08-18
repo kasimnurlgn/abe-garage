@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../../../api/axios";
 import { getAuth } from "../../../../context/auth";
-import styles from "./CreateService.module.css";
 import { BeatLoader } from "react-spinners";
 
 function CreateService() {
@@ -79,7 +78,7 @@ function CreateService() {
   };
 
   return (
-    <div className="my-0">
+    <div className="mb-0">
       <div className="contact-section">
         <div className="auto-container">
           <div className="contact-title">
@@ -87,7 +86,7 @@ function CreateService() {
             <p className="semi-bold">
               Fill in the details below to create a new service.
             </p>
-            {error && <p className={styles.error}>{error}</p>}
+            {error && <p className="errors">{error}</p>}
             {loading ? (
               <BeatLoader color="#123abc" size={10} />
             ) : (

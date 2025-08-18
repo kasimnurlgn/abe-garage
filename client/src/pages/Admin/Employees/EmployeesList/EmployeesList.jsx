@@ -1,8 +1,8 @@
 import React from "react";
 import DashboardSidebar from "../../../../components/Admin/Dashboard/DashboardSidebar";
 import Layout from "../../../Layout/Layout";
-import CreateService from "../../../../components/Admin/Services/CreateService/CreateService";
-function Services() {
+import EmployeesList from "../../../../components/Admin/Employee/EmployeesList/EmployeesList";
+function Employees() {
   return (
     <Layout>
       <div className="container-fluid admin-pages">
@@ -11,7 +11,7 @@ function Services() {
             <DashboardSidebar />
           </div>
           <div className="col-md-9 ">
-            <CreateService />
+            <EmployeesList />
           </div>
         </div>
       </div>
@@ -19,4 +19,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Employees;
