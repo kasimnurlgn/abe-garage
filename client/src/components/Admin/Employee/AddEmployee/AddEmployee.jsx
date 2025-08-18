@@ -68,7 +68,9 @@ function AddEmployee() {
     }
     setLoading(true);
     try {
-      const response = await axiosInstance.post("/employees", formData);
+      await axiosInstance.post("/employees", formData, {
+        headers: { Authorization: `Bearer ${authEmployee.employee_token}` },
+      });
       setError("");
       navigate("/admin/employees");
     } catch (err) {
@@ -86,127 +88,108 @@ function AddEmployee() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  if (loading) return <BeatLoader color="#123abc" size={10} />;
+  if (!authEmployee?.employee_token) return null;
 
   return (
-    <div className="container my-4">
-      <div className="card shadow-sm p-4">
-        <h2 className="mb-3">Create New Employee</h2>
-        <p className="text-muted">
-          Fill in the details below to create a new employee.
-        </p>
-
-        {error && <div className="alert alert-danger">{error}</div>}
-
-        <form onSubmit={handleSubmit} className="row g-3">
-          <div className="col-md-6">
-            <label htmlFor="first_name" className="form-label">
-              First Name
-            </label>
-            <input
-              type="text"
-              name="first_name"
-              value={formData.first_name}
-              onChange={handleChange}
-              placeholder="Enter first name"
-              required
-              className="form-control"
-            />
+    <section className="contact-section">
+      <div className="auto-container">
+        <div className="contact-title">
+          <h2>Add a New Employee</h2>
+        </div>
+        <div className="row clearfix">
+          <div className="form-column col-lg-7">
+            <div className="inner-column">
+              <div className="contact-form">
+                {error && (
+                  <div className="validation-error" role="alert">
+                    {error}
+                  </div>
+                )}
+                <form onSubmit={handleSubmit} className="formSize">
+                  <div className="row clearfix">
+                    <div className="form-group col-md-12">
+                      <input
+                        type="text"
+                        name="first_name"
+                        value={formData.first_name}
+                        onChange={handleChange}
+                        placeholder="First Name"
+                        required
+                      />
+                    </div>
+                    <div className="form-group col-md-12">
+                      <input
+                        type="text"
+                        name="last_name"
+                        value={formData.last_name}
+                        onChange={handleChange}
+                        placeholder="Last Name"
+                      />
+                    </div>
+                    <div className="form-group col-md-12">
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="Email"
+                        required
+                      />
+                    </div>
+                    <div className="form-group col-md-12">
+                      <input
+                        type="text"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="Phone"
+                      />
+                    </div>
+                    <div className="form-group col-md-12">
+                      <input
+                        type="password"
+                        name="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        placeholder="Password"
+                        required
+                      />
+                    </div>
+                    <div className="form-group col-md-12">
+                      <select
+                        name="role_id"
+                        value={formData.role_id}
+                        onChange={handleChange}
+                        required
+                      >
+                        <option value="">Select Role</option>
+                        {roleOptions.map((role) => (
+                          <option key={role.id} value={role.id}>
+                            {role.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="form-group col-md-12">
+                      <button
+                        className="theme-btn btn-style-one"
+                        type="submit"
+                        disabled={loading}
+                        data-loading-text="Please wait..."
+                      >
+                        <span>
+                          {loading ? "Creating..." : "Create Employee"}
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-
-          <div className="col-md-6">
-            <label htmlFor="last_name" className="form-label">
-              Last Name
-            </label>
-            <input
-              type="text"
-              name="last_name"
-              value={formData.last_name}
-              onChange={handleChange}
-              placeholder="Enter last name"
-              className="form-control"
-            />
-          </div>
-
-          <div className="col-md-6">
-            <label htmlFor="email" className="form-label">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter email"
-              required
-              className="form-control"
-            />
-          </div>
-
-          <div className="col-md-6">
-            <label htmlFor="phone" className="form-label">
-              Phone
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="Enter phone number"
-              className="form-control"
-            />
-          </div>
-
-          <div className="col-md-6">
-            <label htmlFor="password" className="form-label">
-              Password
-            </label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Enter password"
-              required
-              className="form-control"
-            />
-          </div>
-
-          <div className="col-md-6">
-            <label htmlFor="role_id" className="form-label">
-              Role
-            </label>
-            <select
-              name="role_id"
-              value={formData.role_id}
-              onChange={handleChange}
-              required
-              className="form-select"
-            >
-              <option value="">Select role</option>
-              {roleOptions.map((role) => (
-                <option key={role.id} value={role.id}>
-                  {role.name}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="col-12 d-flex gap-2 mt-3">
-            <button type="submit" className="btn btn-primary">
-              Create Employee
-            </button>
-            <button
-              type="button"
-              className="btn btn-secondary"
-              onClick={() => navigate("/admin/employees")}
-            >
-              Cancel
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
