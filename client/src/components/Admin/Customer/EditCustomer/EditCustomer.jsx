@@ -9,6 +9,7 @@ function EditCustomer() {
   const [customer_last_name, setLastName] = useState("");
   const [customer_phone_number, setPhoneNumber] = useState("");
   const [customer_active_status, setActiveCustomer] = useState(true);
+  const [customer_hash, setCustomerHash] = useState(""); // Add customer_hash for redirection
   const [serverError, setServerError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [firstNameRequired, setFirstNameRequired] = useState("");
@@ -55,12 +56,14 @@ function EditCustomer() {
             customer_last_name,
             customer_phone_number,
             customer_active_status,
+            customer_hash, // Ensure backend returns this
           } = response.data;
           setEmail(customer_email);
           setFirstName(customer_first_name);
           setLastName(customer_last_name);
           setPhoneNumber(customer_phone_number);
-          setActiveCustomer(customer_active_status);
+          setActiveCustomer(customer_active_status === 1);
+          setCustomerHash(customer_hash); // Store customer_hash
           setServerError("");
         } catch (err) {
           console.error("Error fetching customer:", err);
@@ -88,7 +91,7 @@ function EditCustomer() {
     setFirstNameRequired("");
     setPhoneError("");
 
-    // Basic client-side validation
+    // Client-side validation
     if (!customer_first_name) {
       setFirstNameRequired("First name is required");
       return;
@@ -97,8 +100,11 @@ function EditCustomer() {
       setEmailError("Valid email is required");
       return;
     }
-    if (!customer_phone_number) {
-      setPhoneError("Phone number is required");
+    if (
+      !customer_phone_number ||
+      !/^\d{3}-\d{3}-\d{4}$/.test(customer_phone_number)
+    ) {
+      setPhoneError("Phone number must be in format 555-555-5555");
       return;
     }
 
@@ -115,7 +121,7 @@ function EditCustomer() {
       await axiosInstance.put(`/customers/${id}`, formData, {
         headers: { Authorization: `Bearer ${employee.employee_token}` },
       });
-      navigate("/admin/customers");
+      navigate(`/admin/orders/create/${customer_hash}`); // Redirect to CreateOrder
     } catch (err) {
       console.error("Error updating customer:", err);
       const message = err.response?.data?.error || "Failed to update customer";
@@ -131,7 +137,17 @@ function EditCustomer() {
     }
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <section className="contact-section">
+        <div className="auto-container">
+          <div className="contact-title">
+            <h2>Loading...</h2>
+          </div>
+        </div>
+      </section>
+    );
+  }
   if (!employee?.employee_token) return null;
 
   return (

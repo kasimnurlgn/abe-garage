@@ -18,7 +18,11 @@ import ServicesList from "./pages/Admin/Services/ServiceList/ServicesList";
 import EmployeesList from "./pages/Admin/Employees/EmployeesList/EmployeesList";
 import AddEmployee from "./pages/Admin/Employees/AddEmployee/AddEmployee";
 import EditEmployee from "./pages/Admin/Employees/EditEmployee/EditEmployee";
-
+import EditVehicle from "./pages/Admin/Vehicles/EditVehicle/EditVehicle";
+import VehiclesList from "./pages/Admin/Vehicles/VehiclesList/VehiclesList";
+import CreateVehicle from "./pages/Admin/Vehicles/CreateVehicle/CreateVehicle"
+import VehiclesByCustomer from "./pages/Admin/Vehicles/VehiclesByCustomer/VehiclesByCustomer"
+import VehicleDetails from "./pages/Admin/Vehicles/VehicleDetails/VehicleDetails"
 function RouterApp() {
   return (
     <>
@@ -44,6 +48,20 @@ function RouterApp() {
         <Route path="/admin/employees" element={<EmployeesList />} />
         <Route path="/admin/add-employee" element={<AddEmployee />} />
         <Route path="employees/edit/:id" element={<EditEmployee />} />
+        <Route
+          path="/admin/vehicles/edit/:vehicle_id"
+          element={<EditVehicle />}
+        />
+        <Route path="/admin/vehicles" element={<VehiclesList />} />
+        <Route path="/admin/vehicles/create" element={<CreateVehicle />} />
+        <Route
+          path="/admin/vehicles/:vehicle_id"
+          element={<VehicleDetails />}
+        />
+        <Route
+          path="/admin/vehicles/customer/:customer_hash"
+          element={<VehiclesByCustomer />}
+        />
       </Routes>
     </>
   );

@@ -16,8 +16,8 @@ function CreateOrder() {
   const [estimatedCompletionDate, setEstimatedCompletionDate] = useState("");
   const [additionalRequests, setAdditionalRequests] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingData, setLoadingData] = useState(true);
   const [error, setError] = useState("");
-
   const token = localStorage.getItem("employee_token");
   const employeeId = localStorage.getItem("employee_id");
 
@@ -30,10 +30,11 @@ function CreateOrder() {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
+      console.log("Customer:", response.data); // Debug log
       setCustomer(response.data);
     } catch (err) {
       setError("Failed to fetch customer");
-      console.error(err);
+      console.error("Fetch customer error:", err);
     }
   };
 
@@ -46,10 +47,11 @@ function CreateOrder() {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
+      console.log("Vehicle:", response.data); // Debug log
       setVehicle(response.data[0]);
     } catch (err) {
       setError("Failed to fetch vehicle");
-      console.error(err);
+      console.error("Fetch vehicle error:", err);
     }
   };
 
@@ -59,10 +61,11 @@ function CreateOrder() {
       const response = await axiosInstance.get("/services", {
         headers: { Authorization: `Bearer ${token}` },
       });
+      console.log("Services:", response.data); // Debug log
       setServices(response.data);
     } catch (err) {
       setError("Failed to fetch services");
-      console.error(err);
+      console.error("Fetch services error:", err);
     }
   };
 
@@ -79,15 +82,46 @@ function CreateOrder() {
   // Handle form submission
   const handleCreateOrder = async (e) => {
     e.preventDefault();
-    setLoading(true);
     setError("");
+    setLoading(true);
+
+    if (!token) {
+      setError("Please log in to create an order");
+      setLoading(false);
+      return;
+    }
+    if (!customer?.customer_id) {
+      setError("Customer data not loaded");
+      setLoading(false);
+      return;
+    }
+    if (!employeeId) {
+      setError("Employee ID not found. Please log in again.");
+      setLoading(false);
+      return;
+    }
+    if (selectedServices.length === 0) {
+      setError("Please select at least one service");
+      setLoading(false);
+      return;
+    }
+    if (!orderTotalPrice || isNaN(parseFloat(orderTotalPrice))) {
+      setError("Please enter a valid total price");
+      setLoading(false);
+      return;
+    }
+    if (!estimatedCompletionDate) {
+      setError("Please select an estimated completion date");
+      setLoading(false);
+      return;
+    }
 
     const orderData = {
-      customer_id: customer?.customer_id,
+      customer_id: customer.customer_id,
       employee_id: employeeId,
-      order_total_price: parseFloat(orderTotalPrice) || 0,
+      order_total_price: parseFloat(orderTotalPrice),
       order_estimated_completion_date: estimatedCompletionDate,
-      order_additional_requests: additionalRequests,
+      order_additional_requests: additionalRequests || null,
       services: selectedServices,
     };
 
@@ -98,17 +132,28 @@ function CreateOrder() {
       navigate("/admin/orders");
     } catch (err) {
       setError(err.response?.data?.error || "Failed to create order");
-      console.error(err);
+      console.error("Order creation error:", err);
     } finally {
       setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchCustomer();
-    fetchVehicle();
-    fetchServices();
+    const fetchData = async () => {
+      try {
+        await Promise.all([fetchCustomer(), fetchVehicle(), fetchServices()]);
+      } catch (err) {
+        setError("Failed to load required data", err);
+      } finally {
+        setLoadingData(false);
+      }
+    };
+    fetchData();
   }, [customer_hash, token]);
+
+  if (loadingData) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div style={{ backgroundColor: "#f5f5f5", margin: "-10px" }}>
@@ -133,7 +178,12 @@ function CreateOrder() {
                 {customer?.customer_active_status === 1 ? "Yes" : "No"}
               </p>
               <p className={styles.customerText}>
-                <button style={{ backgroundColor: "white" }}>
+                <button
+                  style={{ backgroundColor: "white" }}
+                  onClick={() =>
+                    navigate(`/admin/customers/edit/${customer.customer_id}`)
+                  }
+                >
                   <span>Edit customer info</span> <FaEdit color="#E90D09" />
                 </button>
               </p>
@@ -170,7 +220,28 @@ function CreateOrder() {
                 {vehicle?.vehicle_make}
               </p>
               <p className={styles.customerText}>
-                <button style={{ backgroundColor: "white" }}>
+                <span>Year: </span>
+                {vehicle?.vehicle_year}
+              </p>
+              <p className={styles.customerText}>
+                <span>Type: </span>
+                {vehicle?.vehicle_type}
+              </p>
+              <p className={styles.customerText}>
+                <span>Mileage: </span>
+                {vehicle?.vehicle_mileage}
+              </p>
+              <p className={styles.customerText}>
+                <span>Tag: </span>
+                {vehicle?.vehicle_tag}
+              </p>
+              <p className={styles.customerText}>
+                <button
+                  style={{ backgroundColor: "white" }}
+                  onClick={() =>
+                    navigate(`/admin/vehicles/edit/${vehicle.vehicle_id}`)
+                  }
+                >
                   <span>Edit vehicle info</span> <FaEdit color="#E90D09" />
                 </button>
               </p>
