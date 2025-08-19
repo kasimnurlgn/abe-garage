@@ -23,6 +23,8 @@ router.post("/", authMiddleware, vehicleController.createVehicle);
 
 // GET /api/vehicles/:id - Retrieve vehicle by ID (authenticated, any employee)
 router.get("/:id", authMiddleware, vehicleController.getVehicleById);
+// vehicles.route.js
+router.get("/customer/:customer_hash", authMiddleware, vehicleController.getVehiclesByCustomerHash);
 
 // PUT /api/vehicles/:id - Update vehicle details (authenticated, Admin/Manager only)
 router.put(

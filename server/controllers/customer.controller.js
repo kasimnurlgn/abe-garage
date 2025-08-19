@@ -81,6 +81,21 @@ const customerController = {
     }
   },
 
+  // cget customer by hash function.
+  async getCustomerByHash(req, res) {
+    try {
+      const { customer_hash } = req.params;
+      const customer = await customerService.getCustomerByHash(customer_hash);
+      if (!customer) {
+        return res.status(404).json({ error: "Customer not found" });
+      }
+      res.status(200).json(customer);
+    } catch (err) {
+      logger.error("Error fetching customer by hash:", err.message);
+      res.status(500).json({ error: "Failed to fetch customer" });
+    }
+  },
+
   // Delete customer
   async deleteCustomer(req, res) {
     try {

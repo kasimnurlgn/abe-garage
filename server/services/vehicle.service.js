@@ -206,6 +206,27 @@ const vehicleService = {
       connection.release();
     }
   },
+  // get vehicles bu cutomer hash
+  async getVehiclesByCustomerHash(customer_hash) {
+    try {
+      const [rows] = await db.query(
+        `
+      SELECT v.vehicle_id, v.customer_id, v.vehicle_serial_number, v.vehicle_make, v.vehicle_model, 
+             v.vehicle_year, v.vehicle_type, v.vehicle_mileage, v.vehicle_tag, v.vehicle_color,
+             c.customer_email
+      FROM customer_vehicle_info v
+      JOIN customer_identifier c ON v.customer_id = c.customer_id
+      JOIN customer_info ci ON c.customer_id = ci.customer_id
+      WHERE c.customer_hash = ? AND ci.customer_active_status = 1
+      `,
+        [customer_hash]
+      );
+      return rows;
+    } catch (err) {
+      logger.error("Database error fetching vehicles by customer hash:", err);
+      throw err;
+    }
+  },
 };
 
 module.exports = vehicleService;

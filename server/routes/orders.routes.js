@@ -21,11 +21,10 @@ router.get("/", authMiddleware, orderController.getAllOrders);
 // POST /api/orders - Create a new order (authenticated, any employee)
 router.post("/", authMiddleware, orderController.createOrder);
 
-// GET /api/orders/:id - Retrieve order by ID (authenticated only)
-router.get("/:id", authMiddleware, orderController.getOrderByIdOrHash);
-
 // GET /api/orders/hash/:order_hash - Retrieve order by hash (public access)
 router.get("/hash/:order_hash", orderController.getOrderByIdOrHash);
+// GET /api/orders/:id - Retrieve order by ID (authenticated only)
+router.get("/:id", authMiddleware, orderController.getOrderByIdOrHash);
 
 // PUT /api/orders/:id - Update order details (authenticated, Admin/Manager only)
 router.put(

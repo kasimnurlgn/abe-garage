@@ -90,7 +90,7 @@ const customerService = {
         [email, phone_number, id]
       );
 
-      // Update customer_info table 
+      // Update customer_info table
       await connection.query(
         "UPDATE customer_info SET customer_first_name = ?, customer_last_name = ?, customer_active_status = ? WHERE customer_id = ?",
         [
@@ -109,6 +109,27 @@ const customerService = {
       throw err;
     } finally {
       connection.release();
+    }
+  },
+
+  // get cusotmer by hash function
+  async getCustomerByHash(customer_hash) {
+    try {
+      const [rows] = await db.query(
+        `
+      SELECT ci.customer_id, ci.customer_email, ci.customer_phone_number, ci.customer_hash,
+             ci.customer_added_date, cinfo.customer_active_status, cinfo.customer_first_name,
+             cinfo.customer_last_name
+      FROM customer_identifier ci
+      JOIN customer_info cinfo ON ci.customer_id = cinfo.customer_id
+      WHERE ci.customer_hash = ? AND cinfo.customer_active_status = 1
+      `,
+        [customer_hash]
+      );
+      return rows[0] || null;
+    } catch (err) {
+      logger.error("Database error fetching customer by hash:", err);
+      throw err;
     }
   },
 

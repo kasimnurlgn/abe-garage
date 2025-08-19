@@ -123,6 +123,19 @@ const vehicleController = {
       res.status(500).json({ error: "Failed to delete vehicle" });
     }
   },
+  // get vehicles by customer hash
+  async getVehiclesByCustomerHash(req, res) {
+    try {
+      const { customer_hash } = req.params;
+      const vehicles = await vehicleService.getVehiclesByCustomerHash(
+        customer_hash
+      );
+      res.status(200).json(vehicles);
+    } catch (err) {
+      logger.error("Error fetching vehicles by customer hash:", err.message);
+      res.status(500).json({ error: "Failed to fetch vehicles" });
+    }
+  },
 };
 
 module.exports = vehicleController;

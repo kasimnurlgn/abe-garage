@@ -24,6 +24,13 @@ router.post("/", customerController.createCustomer);
 // GET /api/customers/:id - Retrieve customer by ID (authenticated, any employee)
 router.get("/:id", authMiddleware, customerController.getCustomerById);
 
+// customers.route.js
+router.get(
+  "/hash/:customer_hash",
+  authMiddleware,
+  customerController.getCustomerByHash
+);
+
 // PUT /api/customers/:id - Update customer details (authenticated, Admin/Manager only)
 router.put(
   "/:id",

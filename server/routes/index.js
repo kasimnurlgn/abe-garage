@@ -12,10 +12,18 @@ const vehicleRoutes = require("./vehicles.routes");
 const installRoutes = require("./install.routes");
 
 // Mount routes
-router.use("/login", loginRoutes); 
+router.use("/login", loginRoutes);
 router.use("/employees", authMiddleware, employeeRoutes);
 router.use("/customers", authMiddleware, customerRoutes);
-router.use("/orders", authMiddleware, orderRoutes);
+// Conditionally apply authMiddleware for /orders
+router.use("/orders", (req, res, next) => {
+  // Skip authentication for GET /orders/hash/:order_hash
+  if (req.method === "GET" && req.path.match(/^\/hash\/[^/]+$/)) {
+    return next();
+  }
+  return authMiddleware(req, res, next);
+});
+router.use("/orders", orderRoutes);
 router.use("/services", authMiddleware, serviceRoutes);
 router.use("/vehicles", authMiddleware, vehicleRoutes);
 router.use("/install", authMiddleware, installRoutes);
