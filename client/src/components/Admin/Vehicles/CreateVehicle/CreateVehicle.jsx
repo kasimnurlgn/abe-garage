@@ -238,7 +238,7 @@ function CreateVehicle() {
 
           <div className="col-12">
             <button
-              className="btn btn-primary w-100"
+              className="btn  w-100 my-3 py-2 bg-danger text-white "
               type="submit"
               disabled={loading}
             >

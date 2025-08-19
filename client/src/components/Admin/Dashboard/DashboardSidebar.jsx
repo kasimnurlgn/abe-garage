@@ -51,6 +51,12 @@ function DashboardSidebar() {
           Customers
         </Link>
         <Link
+          to="/admin/vehicles/create"
+          className={`list-group-item ${css.listItemOverride}`}
+        >
+          Add Vehicles
+        </Link>
+        <Link
           to="/admin/vehicles"
           className={`list-group-item ${css.listItemOverride}`}
         >
