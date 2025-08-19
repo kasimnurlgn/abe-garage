@@ -9,8 +9,9 @@ function VehiclesList() {
   const [vehicles, setVehicles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
- const employee = JSON.parse(localStorage.getItem("employee")) || {};
- const token = employee.employee_token;
+  const employee = JSON.parse(localStorage.getItem("employee")) || {};
+  const token = employee.employee_token;
+  const employeeRole = employee.employee_role;
 
   useEffect(() => {
     if (!token) {
@@ -87,7 +88,7 @@ function VehiclesList() {
             size={24}
             color="#E90D09"
             style={{ cursor: "pointer" }}
-            onClick={() => navigate("/admin")}
+            onClick={() => navigate("/admin/dashboard")}
           />
         </div>
 

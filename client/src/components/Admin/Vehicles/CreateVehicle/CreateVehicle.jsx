@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../../../api/axios";
 import { FaWindowClose } from "react-icons/fa";
@@ -19,7 +19,8 @@ function CreateVehicle() {
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const token = localStorage.getItem("employee_token");
+  const employee = JSON.parse(localStorage.getItem("employee")) || {};
+  const token = employee.employee_token;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -80,10 +81,11 @@ function CreateVehicle() {
     }
   };
 
-  if (!token) {
-    navigate("/login");
-    return null;
-  }
+  useEffect(() => {
+    if (!token) {
+      navigate("/login");
+    }
+  }, [token, navigate]);
 
   return (
     <div className="container-fluid bg-light py-4">
