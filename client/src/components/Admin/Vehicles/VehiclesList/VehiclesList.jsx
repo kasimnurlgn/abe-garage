@@ -9,8 +9,8 @@ function VehiclesList() {
   const [vehicles, setVehicles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const token = localStorage.getItem("employee_token");
-  const employeeRole = localStorage.getItem("employee_role");
+ const employee = JSON.parse(localStorage.getItem("employee")) || {};
+ const token = employee.employee_token;
 
   useEffect(() => {
     if (!token) {
