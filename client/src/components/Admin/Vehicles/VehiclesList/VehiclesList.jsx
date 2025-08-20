@@ -137,7 +137,7 @@ function VehiclesList() {
                       <FaEye />
                     </button>
                     <button
-                      className="btn btn-outline-primary btn-sm me-2"
+                      className="btn btn-outline-primary btn-sm me-2 mx-2"
                       onClick={() =>
                         navigate(`/admin/vehicles/edit/${vehicle.vehicle_id}`)
                       }

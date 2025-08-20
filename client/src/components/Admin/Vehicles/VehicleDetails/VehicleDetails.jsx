@@ -11,8 +11,9 @@ function VehicleDetails() {
   const [vehicle, setVehicle] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const token = localStorage.getItem("employee_token");
-  const employeeRole = localStorage.getItem("employee_role");
+  const employee = JSON.parse(localStorage.getItem("employee")) || {};
+  const token = employee.employee_token;
+  const employeeRole = employee.role;
 
   useEffect(() => {
     if (!token) {
