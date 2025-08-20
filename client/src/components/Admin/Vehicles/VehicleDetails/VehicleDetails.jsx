@@ -128,7 +128,7 @@ function VehicleDetails() {
 
           <div className="d-flex gap-2">
             <button
-              className="btn btn-outline-danger d-flex align-items-center gap-2"
+              className="btn btn-outline-danger d-flex align-items-center gap-2 mr-3"
               onClick={() =>
                 navigate(`/admin/vehicles/edit/${vehicle.vehicle_id}`)
               }
