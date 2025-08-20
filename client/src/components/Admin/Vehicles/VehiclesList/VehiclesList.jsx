@@ -88,8 +88,8 @@ function VehiclesList() {
           <div className="d-flex gap-2">
             {/* Add Vehicle Button */}
             <button
-              className="btn btn-success btn-sm d-flex align-items-center"
-              onClick={() => navigate("/admin/vehicles/add")}
+              className="btn btn-success btn-sm d-flex align-items-center mr-4"
+              onClick={() => navigate("/admin/vehicles/create")}
             >
               <FaPlus className="me-1" /> Add Vehicle
             </button>
