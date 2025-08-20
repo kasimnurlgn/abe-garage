@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axiosInstance from "../../../../api/axios";
 import { FaEdit, FaTrash, FaWindowClose, FaEye, FaPlus } from "react-icons/fa";
 import { BeatLoader } from "react-spinners";
@@ -13,7 +13,7 @@ function VehiclesList() {
   const token = employee.employee_token;
   const employeeRole = employee.role;
 
-  console.log("Employee Role:", employeeRole);
+  // console.log("Employee Role:", employeeRole);
   useEffect(() => {
     if (!token) {
       navigate("/login");
@@ -86,6 +86,13 @@ function VehiclesList() {
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h3 className="mb-0">Vehicles List</h3>
           <div className="d-flex gap-2">
+            <Link
+              to={`/admin/vehicles/customer/${vehicles.customer_hash}`}
+              className="btn btn-outline-info btn-sm me-2"
+            >
+              Customer’s Vehicles
+            </Link>
+
             {/* Add Vehicle Button */}
             <button
               className="btn btn-success btn-sm d-flex align-items-center mr-4"
@@ -136,6 +143,7 @@ function VehiclesList() {
                     >
                       <FaEye />
                     </button>
+
                     <button
                       className="btn btn-outline-primary btn-sm me-2 mx-2"
                       onClick={() =>

@@ -18,8 +18,10 @@ function CreateOrder() {
   const [loading, setLoading] = useState(false);
   const [loadingData, setLoadingData] = useState(true);
   const [error, setError] = useState("");
-  const token = localStorage.getItem("employee_token");
-  const employeeId = localStorage.getItem("employee_id");
+  const employee = JSON.parse(localStorage.getItem("employee")) || {};
+  const token = employee.employee_token;
+  const employeeId = employee.employee_id;
+  // const employeeRole = employee.role;
 
   // Fetch customer by hash
   const fetchCustomer = async () => {
