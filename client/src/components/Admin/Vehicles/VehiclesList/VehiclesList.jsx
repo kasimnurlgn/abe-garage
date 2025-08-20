@@ -127,6 +127,15 @@ function VehiclesList() {
                   <td>{vehicle.vehicle_year}</td>
                   <td>{vehicle.customer_email}</td>
                   <td className="text-center">
+                    {/* View More */}
+                    <button
+                      className="btn btn-outline-secondary btn-sm me-2"
+                      onClick={() =>
+                        navigate(`/admin/vehicles/${vehicle.vehicle_id}`)
+                      }
+                    >
+                      <FaEye />
+                    </button>
                     <button
                       className="btn btn-outline-primary btn-sm me-2"
                       onClick={() =>
