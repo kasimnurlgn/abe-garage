@@ -197,7 +197,7 @@ function CreateVehicle() {
               onChange={(e) =>
                 setVehicle({ ...vehicle, vehicle_mileage: e.target.value })
               }
-              placeholder="Mileage"
+              placeholder="Mileage (number)"
               required
             />
           </div>
@@ -211,7 +211,7 @@ function CreateVehicle() {
               onChange={(e) =>
                 setVehicle({ ...vehicle, vehicle_tag: e.target.value })
               }
-              placeholder="Tag"
+              placeholder="Tag (text) "
               required
             />
           </div>
@@ -238,7 +238,7 @@ function CreateVehicle() {
 
           <div className="col-12">
             <button
-              className="btn  w-100 my-3 py-2 bg-danger text-white "
+              className="btn  w-100 my-3 py-2 bg-success text-white "
               type="submit"
               disabled={loading}
             >
