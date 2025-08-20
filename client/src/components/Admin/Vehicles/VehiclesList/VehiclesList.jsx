@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../../../api/axios";
-import { FaEdit, FaTrash, FaWindowClose } from "react-icons/fa";
+import { FaEdit, FaTrash, FaWindowClose, FaEye, FaPlus } from "react-icons/fa";
 import { BeatLoader } from "react-spinners";
 
 function VehiclesList() {
@@ -11,8 +11,9 @@ function VehiclesList() {
   const [error, setError] = useState("");
   const employee = JSON.parse(localStorage.getItem("employee")) || {};
   const token = employee.employee_token;
-  const employeeRole = employee.employee_role;
+  const employeeRole = employee.role;
 
+  console.log("Employee Role:", employeeRole);
   useEffect(() => {
     if (!token) {
       navigate("/login");
@@ -84,12 +85,23 @@ function VehiclesList() {
       <div className="container bg-white shadow rounded p-4">
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h3 className="mb-0">Vehicles List</h3>
-          <FaWindowClose
-            size={24}
-            color="#E90D09"
-            style={{ cursor: "pointer" }}
-            onClick={() => navigate("/admin/dashboard")}
-          />
+          <div className="d-flex gap-2">
+            {/* Add Vehicle Button */}
+            <button
+              className="btn btn-success btn-sm d-flex align-items-center"
+              onClick={() => navigate("/admin/vehicles/add")}
+            >
+              <FaPlus className="me-1" /> Add Vehicle
+            </button>
+
+            {/* Close Icon */}
+            <FaWindowClose
+              size={24}
+              color="#E90D09"
+              style={{ cursor: "pointer" }}
+              onClick={() => navigate("/admin/dashboard")}
+            />
+          </div>
         </div>
 
         {error && <div className="alert alert-danger">{error}</div>}
