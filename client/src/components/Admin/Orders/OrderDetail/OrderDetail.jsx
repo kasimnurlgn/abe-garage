@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import styles from "./ViewOrder.module.css";
+import styles from "./OrderDetail.module.css";
 import { format } from "date-fns";
 
-const ViewOrder = () => {
+const OrderDetail = () => {
   const { order_hash } = useParams();
   const navigate = useNavigate();
   const [orderDetails, setOrderDetails] = useState(null);
@@ -150,4 +150,4 @@ const ViewOrder = () => {
   );
 };
 
-export default ViewOrder;
+export default OrderDetail;

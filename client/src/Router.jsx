@@ -20,9 +20,10 @@ import AddEmployee from "./pages/Admin/Employees/AddEmployee/AddEmployee";
 import EditEmployee from "./pages/Admin/Employees/EditEmployee/EditEmployee";
 import EditVehicle from "./pages/Admin/Vehicles/EditVehicle/EditVehicle";
 import VehiclesList from "./pages/Admin/Vehicles/VehiclesList/VehiclesList";
-import CreateVehicle from "./pages/Admin/Vehicles/CreateVehicle/CreateVehicle"
-import VehiclesByCustomer from "./pages/Admin/Vehicles/VehiclesByCustomer/VehiclesByCustomer"
-import VehicleDetails from "./pages/Admin/Vehicles/VehicleDetails/VehicleDetails"
+import CreateVehicle from "./pages/Admin/Vehicles/CreateVehicle/CreateVehicle";
+import VehiclesByCustomer from "./pages/Admin/Vehicles/VehiclesByCustomer/VehiclesByCustomer";
+import VehicleDetails from "./pages/Admin/Vehicles/VehicleDetails/VehicleDetails";
+import OrderDetail from "./pages/Admin/Orders/OrderDetail/OrderDetail";
 function RouterApp() {
   return (
     <>
@@ -35,11 +36,12 @@ function RouterApp() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/orders" element={<GetOrders />} />
-        <Route path="/admin/orders/edit/:order_hash" element={<EditOrder />} />
+        <Route path="/admin/order/:order_hash" element={<OrderDetail />} />
         <Route
           path="/admin/orders/create/:customer_hash"
           element={<CreateOrder />}
         />
+        <Route path="/admin/orders/edit/:order_hash" element={<EditOrder />} />
         <Route path="/admin/customers" element={<GetCustomers />} />
         <Route path="/admin/customers/edit/:id" element={<EditCustomer />} />
         <Route path="/admin/add-customer" element={<AddCustomer />} />
