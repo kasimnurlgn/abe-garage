@@ -24,7 +24,7 @@ import CreateVehicle from "./pages/Admin/Vehicles/CreateVehicle/CreateVehicle";
 import VehiclesByCustomer from "./pages/Admin/Vehicles/VehiclesByCustomer/VehiclesByCustomer";
 import VehicleDetails from "./pages/Admin/Vehicles/VehicleDetails/VehicleDetails";
 import OrderDetail from "./pages/Admin/Orders/OrderDetail/OrderDetail";
-import AdminProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 function RouterApp() {
   return (
@@ -42,145 +42,145 @@ function RouterApp() {
         <Route
           path="/admin/dashboard"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <Dashboard />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/orders"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <GetOrders />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/order/:order_hash"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <OrderDetail />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/orders/create/:customer_hash"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <CreateOrder />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/orders/edit/:order_hash"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <EditOrder />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/customers"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <GetCustomers />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/customers/edit/:id"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <EditCustomer />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/add-customer"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <AddCustomer />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/services"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <ServicesList />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/services/edit/:id"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <EditService />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/employees"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <EmployeesList />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/add-employee"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <AddEmployee />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/employees/edit/:id"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <EditEmployee />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/vehicles/edit/:vehicle_id"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <EditVehicle />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/vehicles"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <VehiclesList />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/vehicles/create"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <CreateVehicle />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/vehicles/:vehicle_id"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <VehicleDetails />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/admin/vehicles/customer/:customer_hash"
           element={
-            <AdminProtectedRoute>
+            <ProtectedRoute>
               <VehiclesByCustomer />
-            </AdminProtectedRoute>
+            </ProtectedRoute>
           }
         />
       </Routes>

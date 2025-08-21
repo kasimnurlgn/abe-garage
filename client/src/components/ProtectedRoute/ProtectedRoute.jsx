@@ -1,32 +1,31 @@
-// AdminProtectedRoute.jsx
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { getAuth } from "../../context/auth"; 
+import { getAuth } from "../../context/auth";
+import { BeatLoader } from "react-spinners";
 
-const ProtectedRoute = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isAuthorized, setIsAuthorized] = useState(false);
+function ProtectedRoute({ children }) {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const checkAuth = async () => {
-      const employee = await getAuth();
-      if (
-        employee &&
-        employee.employee_token &&
-        employee.employee_role === "admin"
-      ) {
-        setIsAuthorized(true);
-      } else {
-        setIsAuthorized(false);
+      try {
+        const authData = await getAuth();
+        console.log("Auth data in ProtectedRoute:", authData);
+        setIsAuthenticated(!!authData.employee_token);
+      } catch (err) {
+        console.error("Error checking auth:", err);
+        setIsAuthenticated(false);
+      } finally {
+        setLoading(false);
       }
-      setIsLoading(false);
     };
     checkAuth();
   }, []);
 
-  if (isLoading) return <div>Loading...</div>;
-
-  return isAuthorized ? children : <Navigate to="/login" replace />;
-};
+  if (loading) return <BeatLoader color="#123abc" size={10} />;
+  if (!isAuthenticated) return <Navigate to="/login" />;
+  return children;
+}
 
 export default ProtectedRoute;
