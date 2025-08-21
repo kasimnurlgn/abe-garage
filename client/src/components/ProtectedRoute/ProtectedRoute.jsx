@@ -1,7 +1,7 @@
 // AdminProtectedRoute.jsx
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { getAuth } from "../ProtectedRoute/ProtectedRoute"; 
+import { getAuth } from "../../context/auth"; 
 
 const ProtectedRoute = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
