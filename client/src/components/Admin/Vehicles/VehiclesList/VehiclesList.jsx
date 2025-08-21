@@ -10,6 +10,7 @@ function VehiclesList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const employee = JSON.parse(localStorage.getItem("employee")) || {};
+  console.log(employee);
   const token = employee.employee_token;
   const employeeRole = employee.role;
 
@@ -27,6 +28,7 @@ function VehiclesList() {
           headers: { Authorization: `Bearer ${token}` },
         });
         setVehicles(response.data);
+        // console.log(response.data);
         setError("");
       } catch (err) {
         setError(err.response?.data?.error || "Failed to fetch vehicles");
@@ -86,12 +88,12 @@ function VehiclesList() {
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h3 className="mb-0">Vehicles List</h3>
           <div className="d-flex gap-2">
-            <Link
+            {/* <Link
               to={`/admin/vehicles/customer/${vehicles.customer_hash}`}
               className="btn btn-outline-info btn-sm me-2"
             >
               Customer’s Vehicles
-            </Link>
+            </Link> */}
 
             {/* Add Vehicle Button */}
             <button
