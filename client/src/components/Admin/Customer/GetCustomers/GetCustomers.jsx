@@ -42,7 +42,7 @@ function GetCustomers() {
           const response = await axiosInstance.get("/customers", {
             headers: { Authorization: `Bearer ${employee.employee_token}` },
           });
-          console.log("Fetched customers:", response.data); // Log for debugging
+          console.log("Fetched customers:", response.data); 
           setCustomers(response.data);
           setError("");
         } catch (err) {

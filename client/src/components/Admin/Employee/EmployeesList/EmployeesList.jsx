@@ -162,13 +162,13 @@ function EmployeesList() {
                         onClick={() =>
                           navigate(`/employees/edit/${employee.employee_id}`)
                         }
-                        className="btn btn-sm btn-warning me-2"
+                        className="btn btn-sm btn-warning mr-2"
                       >
                         <FaEdit />
                       </button>
                       <button
                         onClick={() => handleDelete(employee.employee_id)}
-                        className="btn btn-sm btn-danger"
+                        className="btn btn-sm btn-danger ml-1"
                       >
                         <MdDelete />
                       </button>
