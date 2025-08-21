@@ -104,81 +104,82 @@ function GetCustomers() {
               onChange={handleSearch}
             />
           </div>
-
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Added Date</th>
-                <th>Active</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {(filteredCustomers.length > 0
-                ? filteredCustomers
-                : customers
-              ).map((customer) => (
-                <tr key={customer.customer_id}>
-                  <td>{customer.customer_id}</td>
-                  <td>{customer.customer_first_name}</td>
-                  <td>{customer.customer_last_name}</td>
-                  <td>{customer.customer_email}</td>
-                  <td>{customer.customer_phone_number}</td>
-                  <td>
-                    {format(
-                      new Date(customer.customer_added_date),
-                      "MM-dd-yyyy | HH:mm"
-                    )}
-                  </td>
-                  <td>
-                    {customer.customer_active_status === 1
-                      ? "Yes"
-                      : customer.customer_active_status === 0
-                      ? "No"
-                      : "Unknown"}
-                  </td>
-                  <td>
-                    <div className="edit-delete-icons">
-                      <button
-                        onClick={() =>
-                          navigate(
-                            `/admin/customers/edit/${customer.customer_id}`
-                          )
-                        }
-                        disabled={
-                          employee.employee_role !== "Admin" &&
-                          employee.employee_role !== "Manager"
-                        }
-                      >
-                        <FaEdit />
-                      </button>{" "}
-                      <button
-                        onClick={() =>
-                          navigate(`/admin/customers/${customer.customer_id}`)
-                        }
-                      >
-                        <FaArrowUpRightFromSquare />
-                      </button>{" "}
-                      <button
-                        onClick={() =>
-                          navigate(
-                            `/admin/orders/create/${customer.customer_hash}`
-                          )
-                        }
-                      >
-                        Create Order
-                      </button>
-                    </div>
-                  </td>
+          <div className="table-responsive">
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Added Date</th>
+                  <th>Active</th>
+                  <th>Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </Table>
+              </thead>
+              <tbody>
+                {(filteredCustomers.length > 0
+                  ? filteredCustomers
+                  : customers
+                ).map((customer) => (
+                  <tr key={customer.customer_id}>
+                    <td>{customer.customer_id}</td>
+                    <td>{customer.customer_first_name}</td>
+                    <td>{customer.customer_last_name}</td>
+                    <td>{customer.customer_email}</td>
+                    <td>{customer.customer_phone_number}</td>
+                    <td>
+                      {format(
+                        new Date(customer.customer_added_date),
+                        "MM-dd-yyyy | HH:mm"
+                      )}
+                    </td>
+                    <td>
+                      {customer.customer_active_status === 1
+                        ? "Yes"
+                        : customer.customer_active_status === 0
+                        ? "No"
+                        : "Unknown"}
+                    </td>
+                    <td>
+                      <div className="edit-delete-icons">
+                        <button
+                          onClick={() =>
+                            navigate(
+                              `/admin/customers/edit/${customer.customer_id}`
+                            )
+                          }
+                          disabled={
+                            employee.employee_role !== "Admin" &&
+                            employee.employee_role !== "Manager"
+                          }
+                        >
+                          <FaEdit />
+                        </button>{" "}
+                        <button
+                          onClick={() =>
+                            navigate(`/admin/customers/${customer.customer_id}`)
+                          }
+                        >
+                          <FaArrowUpRightFromSquare />
+                        </button>{" "}
+                        <button
+                          onClick={() =>
+                            navigate(
+                              `/admin/orders/create/${customer.customer_hash}`
+                            )
+                          }
+                        >
+                          Create Order
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </div>
         </div>
       </div>
     </section>
