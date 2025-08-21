@@ -115,70 +115,64 @@ function EmployeesList() {
       {employees.length === 0 ? (
         <p>No employees available.</p>
       ) : (
-        <table className="table table-bordered table-striped">
-          <thead>
-            <tr>
-              <th>Active</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Added Date</th>
-              <th>Role</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {employees.map((employee) => (
-              <tr key={employee.employee_id}>
-                <td>{employee.employee_active_status ? "Yes" : "No"}</td>
-                <td>
-                  <a
-                    href={`/employees/${employee.employee_id}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      navigate(`/employees/${employee.employee_id}`);
-                    }}
-                  >
-                    {employee.employee_first_name}
-                  </a>
-                </td>
-                <td>{employee.employee_last_name}</td>
-                <td>{employee.employee_email}</td>
-                <td>{employee.employee_phone || "N/A"}</td>
-                <td>
-                  {employee.employee_added_date
-                    ? format(
-                        new Date(employee.employee_added_date),
-                        "MM-dd-yyyy | HH:mm"
-                      )
-                    : "N/A"}
-                </td>
-                <td>{employee.role}</td>
-                <td>
-                  {isAdminOrManager && (
-                    <>
-                      <button
-                        onClick={() =>
-                          navigate(`/employees/edit/${employee.employee_id}`)
-                        }
-                        className="btn btn-sm btn-warning mr-2"
-                      >
-                        <FaEdit />
-                      </button>
-                      <button
-                        onClick={() => handleDelete(employee.employee_id)}
-                        className="btn btn-sm btn-danger ml-1"
-                      >
-                        <MdDelete />
-                      </button>
-                    </>
-                  )}
-                </td>
+        <div className="table-responsive">
+          <table className="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Active</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Added Date</th>
+                <th>Role</th>
+                <th>Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {employees.map((employee) => (
+                <tr key={employee.employee_id}>
+                  <td>{employee.employee_active_status ? "Yes" : "No"}</td>
+                  <td className="text-primary">
+                    {employee.employee_first_name}
+                  </td>
+                  <td>{employee.employee_last_name}</td>
+                  <td>{employee.employee_email}</td>
+                  <td>{employee.employee_phone || "N/A"}</td>
+                  <td>
+                    {employee.employee_added_date
+                      ? format(
+                          new Date(employee.employee_added_date),
+                          "MM-dd-yyyy | HH:mm"
+                        )
+                      : "N/A"}
+                  </td>
+                  <td>{employee.role}</td>
+                  <td>
+                    {isAdminOrManager && (
+                      <>
+                        <button
+                          onClick={() =>
+                            navigate(`/employees/edit/${employee.employee_id}`)
+                          }
+                          className="btn btn-sm btn-warning mr-2"
+                        >
+                          <FaEdit />
+                        </button>
+                        <button
+                          onClick={() => handleDelete(employee.employee_id)}
+                          className="btn btn-sm btn-danger "
+                        >
+                          <MdDelete />
+                        </button>
+                      </>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );
