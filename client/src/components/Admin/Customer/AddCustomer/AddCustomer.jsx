@@ -168,7 +168,7 @@ function AddCustomer() {
                         name="customer_phone_number"
                         value={customer_phone_number}
                         onChange={(event) => setPhoneNumber(event.target.value)}
-                        placeholder="Customer phone (555-555-5555)"
+                        placeholder="Customer phone "
                         required
                       />
                       {phoneError && (
