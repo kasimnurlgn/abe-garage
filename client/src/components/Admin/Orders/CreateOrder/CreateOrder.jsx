@@ -32,7 +32,7 @@ function CreateOrder() {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      console.log("Customer:", response.data); // Debug log
+      console.log("Customer:", response.data);
       setCustomer(response.data);
     } catch (err) {
       setError("Failed to fetch customer");
@@ -49,7 +49,7 @@ function CreateOrder() {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      console.log("Vehicle:", response.data); // Debug log
+      console.log("Vehicle:", response.data);
       setVehicle(response.data[0]);
     } catch (err) {
       setError("Failed to fetch vehicle");
@@ -63,7 +63,7 @@ function CreateOrder() {
       const response = await axiosInstance.get("/services", {
         headers: { Authorization: `Bearer ${token}` },
       });
-      console.log("Services:", response.data); // Debug log
+      console.log("Services:", response.data);
       setServices(response.data);
     } catch (err) {
       setError("Failed to fetch services");
@@ -274,7 +274,7 @@ function CreateOrder() {
                     key={service.service_id}
                     className="bg-white my-2 d-flex shadow-sm"
                   >
-                    <div className="py-4 px-4 flex-grow-1">
+                    <div className="py-4 px-5 flex-grow-1">
                       <h5 className="mb-1 font-weight-bold">
                         {service.service_name}
                       </h5>
@@ -282,7 +282,7 @@ function CreateOrder() {
                         {service.service_description}
                       </h6>
                     </div>
-                    <div className="checkbox-container">
+                    <div className="checkbox-container px-5">
                       <input
                         type="checkbox"
                         value={service.service_id}
