@@ -20,12 +20,12 @@ function DashboardSidebar() {
         >
           Orders
         </Link>
-        <Link
+        {/* <Link
           to="/admin/orders/create/:customer_hash"
           className={`list-group-item ${css.listItemOverride}`}
         >
           New order
-        </Link>
+        </Link> */}
         <Link
           to="/admin/add-employee"
           className={`list-group-item ${css.listItemOverride}`}
